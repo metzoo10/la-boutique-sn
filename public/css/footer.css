@@ -1,0 +1,316 @@
+/* Barre Info styles */
+
+.blue-info-bar {
+    background-color: #161B6E;
+    color: white;
+    padding: 20px 0;
+}
+
+.blue-info-bar .info-box {
+    text-align: center;
+}
+
+.blue-info-bar .info-box i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.blue-info-bar .info-box p {
+    margin: 0;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.blue-info-bar .info-box span {
+    display: block;
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Footer Styles général */
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    color: #333;
+}
+
+.footer h5 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer p, .footer ul, .footer li {
+    margin: 0;
+    padding: 0;
+    color: #666666;
+    list-style: none;
+    font-size: 13px;
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer .newsletter input[type="email"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.footer .newsletter button {
+    padding: 10px;
+    background-color: #6DE9EF;
+    color: white;
+    border: none;
+}
+
+.footer-box .item-content {
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+
+.footer-box .item-header {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    color: #111111;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.footer-box .blue-number {
+    color: #6de9ef;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* Partie des contacts */
+
+.footer-box .wrap-contact-detail ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-box .wrap-contact-detail ul li{
+    display: inline-block;
+    float: left;
+    width: 100%;
+    color: #555555;
+}
+.footer-box .wrap-contact-detail ul li:not(:last-child){
+    margin-bottom: 9px;
+}
+.footer-box .wrap-contact-detail ul li i{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+    width: 26px;
+    float: left;
+}
+.footer-box .wrap-contact-detail ul li .contact-txt{
+    display: inline-block;
+    margin: 0;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: left;
+    max-width: calc( 100% - 26px);
+    max-width: -webkit-calc( 100% - 26px);
+    max-width: -moz-calc( 100% - 26px);
+    float: left;
+    padding-right: 8%
+}
+/* Partie logos des réseaux sociaux */
+
+.footer-box.social-network ul {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-box.social-network ul li a {
+    background-color: #161B6E;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 12px 5px;
+    display: inline-block;
+    text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-box.social-network ul li a i {
+    font-size: 20px;
+    color: #fff;
+    line-height: 20px;
+}
+
+.footer-box.social-network ul li a:hover i {
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-box.social-network ul li a:hover {
+    background-color: #6DE9EF;
+}
+/* Partie des images paiement */
+
+.footer-box.payment-box ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-box.payment-box ul li {
+    margin-right: 10px;
+}
+
+.footer-box.payment-box img {
+    height: 30px;
+    border-radius: 5px;
+}
+
+.footer .footer-box a {
+    color: #666666;
+    text-decoration: none;
+}
+
+.footer .footer-box a:hover {
+    color: #6DE9EF;
+}
+
+.footer-box {
+    margin-bottom: 20px;
+}
+
+/* Liens rapides styles */
+
+.wrap-back-link {
+    border-top: 1px solid #e6e6e6;
+    padding-top: 16px;
+    margin-top: 39px;
+}
+
+.back-link-box .backlink-title {
+    font-size: 14px;
+    color: #222222;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.back-link-box  .back-link-row{
+    display: block;
+    font-size: 0;
+}
+.back-link-box  .list-back-link{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+.back-link-box  .list-back-link li{
+    display: inline-block;
+    float: left;
+}
+.back-link-box  .list-back-link li span,
+.back-link-box  .list-back-link li a{
+    text-transform: capitalize;
+}
+.back-link-box  .list-back-link li .row-title{
+    font-size: 14px;
+    line-height: 30px;
+    color: #000;
+    font-weight: 700;
+}
+.back-link-box  .list-back-link li .redirect-back-link{
+    font-size: 13px;
+    color: #666666;
+    line-height: 30px;
+    text-decoration: none;
+}
+.back-link-box  .list-back-link li .redirect-back-link:hover {
+    color: #6DE9EF;
+}
+.back-link-box  .list-back-link li:nth-child(2) .redirect-back-link{
+    padding-left: 5px;
+    padding-right: 12px;
+}
+.back-link-box  .list-back-link li:not(:nth-child(2)):not(:nth-child(1)) .redirect-back-link{
+    padding-right: 12px;
+    padding-left: 12px;   
+}
+.back-link-box  .list-back-link li:not(:last-child):not(:nth-child(1)) .redirect-back-link::after{
+    content: '';
+    display: inline-block;
+    float: right;
+    width: 1px;
+    height: 13px;
+    background: #e6e6e6;
+    transform: translateY(8.5px);
+    -webkit-transform: translateY(8.5px);
+    -ms-transform: translateY(8.5px);
+}
+
+.footer .row:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .row:last-child .footer-box {
+    margin-bottom: 0;
+}
+
+.footer .row:last-child .footer-box h5 {
+    margin-bottom: 10px;
+}
+
+/* Dernier footer styles */
+
+.last-footer {
+    background-color: #161B6E;
+    color: #fff;
+    padding: 10px;
+    font-size: 13px;
+}
+.last-footer p {
+    margin: 0;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li {
+    display: inline;
+    margin-left: 20px;
+    border-right: 1px solid #555;
+}
+.footer-links li:last-child {
+    border-right: none;
+}
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+.footer-links a:hover {
+    color: #6DE9EF;
+}
+.text-right {
+    text-align: center;
+}

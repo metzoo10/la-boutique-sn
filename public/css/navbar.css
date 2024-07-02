@@ -1,0 +1,163 @@
+/*Premier Navbar styles*/
+
+.navbar-custom {
+    background-color: white;
+    border-bottom: 1px solid #e7e7e7;
+}
+.navbar-brand img {
+    height: 80px;
+}
+
+/* Barre de recherche styles */
+
+.search-bar {
+    width: 80%;
+    border: 3px solid #161B6E;
+    border-radius: 20px;
+}
+.search-bar .input-group {
+    width: 100%;
+}
+.search-bar input {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: none;
+    box-shadow: none;
+    border: 1px solid #ddd;
+}
+.search-bar select {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    width: 150px;
+}
+.search-bar .input-group-append button {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #ddd;
+    background-color: #161B6E;
+    color: white;
+}
+
+/* Styles Menu déroulant de la barre de recherche */
+
+.dropdown {
+    position: relative;
+}
+.dropdown-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.dropdown-toggle i {
+    margin-left: 5px;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    min-width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+.dropdown-menu a:hover {
+    background-color: #f8f8f8;
+    color: #6DE9EF;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown:hover .dropdown-toggle {
+    border-color: #ddd;
+}
+
+/* Styles du panier et des badges */
+
+.navbar-nav .nav-item {
+    color: #fff;
+}
+.nav-item {
+    align-items: center;
+}
+.wishlist, .cart {
+    position: relative;
+    padding-right: 20px;
+}
+.wishlist .badge, .cart .badge {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background-color: #161B6E;
+    color: white;
+    font-size: 12px;
+}
+    /* Styles du second navbar */
+
+.second-navbar {
+    background-color: #161B6E;
+}
+.second-navbar .nav-link {
+    color: white;
+    font-weight: 500;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.second-navbar .nav-item {
+    border-right: 1px solid #555;
+}
+.second-navbar .nav-item:last-child {
+    border-right: none;
+}
+.second-navbar .nav-link:hover {
+    color: #6DE9EF;
+    transition: .5s ease-out;
+}
+.nav-item .fa-house {
+    color: #6DE9EF;
+}
+.nav-item .fa-house:hover {
+    color: #fff;
+    transition: .5s ease-out;
+}
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.second-navbar .ml-auto .nav-link {
+    color: white;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.second-navbar .ml-auto .nav-link:hover {
+    color: #6DE9EF;
+}
+.ml-auto {
+    margin-left: auto !important;
+}
+.connect-link, .register-link {
+    margin-left: auto;
+    padding: 10px 15px;
+}
+.connect-link {
+    margin-right: 15px;
+}
