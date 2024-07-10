@@ -13,7 +13,7 @@
                     <div class="info-box">
                         <i class="fas fa-undo"></i>
                         <p>GARANTIE</p>
-                        <span>30 jours de remboursement</span>
+                        <span>Remboursement sous 30 jours</span>
                     </div>
                 </div>
                 <div class="col-md-3">
