@@ -29,7 +29,7 @@ class CategoryController extends Controller
     {
         $produitsTools = Product::where('categorie', 'Bricolage')->get();
 
-        return view('categories.tools', compact('produitsBricolage'));
+        return view('categories.tools', compact('produitsTools'));
     }
     public function produitsFurniture()
     {
