@@ -44,9 +44,6 @@ break;
 case 'nom_desc':
 $query->orderBy('nom', 'desc');
 break;
-}
-}
-
 // enregistrer la requête dans $produits puis crée une pagination de 12 produits par page avec "paginate".
 $produits = $query->paginate(12);
 
@@ -57,4 +54,5 @@ $categories = Product::select('categorie')->distinct()->get();
 return view('boutique', compact('produits' ,'categories'));
 }
 }
-
+}
+}
