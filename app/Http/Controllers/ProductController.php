@@ -6,8 +6,8 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
-{   
-    // Fonction "show" avec paramètre $id qui récupère dans un tableau compact, les produits par leurs id.
+{ 
+// Fonction "show" avec paramètre $id qui récupère dans un tableau compact, les produits par leurs id.
 
     public function show($id)
     {
