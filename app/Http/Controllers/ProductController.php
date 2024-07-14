@@ -56,4 +56,11 @@ class ProductController extends Controller
         // envoie un tableau des résultats de requête à la vue "Boutique".
         return view('boutique', compact('produits' ,'categories'));
     }
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        $produits = Product::where('nom', 'LIKE', "%$query%")->get();
+
+        return view('search', compact('produits'));
+    }
 }

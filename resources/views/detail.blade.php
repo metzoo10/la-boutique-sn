@@ -3,14 +3,25 @@
 @section('content')
 	<!-- Page de détail de produit -->
 
-	{{-- Condition si un produit est ajouté dans le panier ou sur la liste de souhaits, une alerte verte avec message sera affiché --}}
+	{{-- Condition si un produit est ajouté dans le wishlist ou sur la liste de souhaits, une alerte verte avec message sera affiché --}}
 	@if(session('success'))
-		<div class="alert alert-success">
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
 			{{ session('success') }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		</div>
 	@endif
+
+	<div class="container mt-5">
+		<nav aria-label="breadcrumb">
+	  		<ol class="breadcrumb">
+	    		<li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="/">Accueil</a></li>
+	    		<li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="/boutique">Boutique</a></li>
+	    		<li class="breadcrumb-item active text-uppercase" aria-current="page">{{ $produit->nom }}</li>
+	  		</ol>
+		</nav>
+	</div>
 	<div class="container mt-5 mb-3">
-		<div class="row">
+		<div class="row g-5">
 			{{-- Colonne image produit --}}
 			<div class="col-md-4">
 				<img src="/{{ $produit->image }}" alt="{{ $produit->nom }}" class="img-fluid">
@@ -24,13 +35,17 @@
 					<div class="quantity-input mt-2">
 						<label class="mb-3" for="quantity">Quantité :</label>
 						<div class="input-group">
-							<div class="input-group-prepend">
-								<button class="btn btn-outline-secondary btn-minus" type="button">-</button>
-							</div>
-							<input type="text" class="form-control" id="quantity" value="1" readonly>
-							<div class="input-group-append">
-								<button class="btn btn-outline-secondary btn-plus">+</button>
-							</div>
+							<span class="input-group-btn">
+								<button class="quantity-left-minus btn btn-outline-info btn-number" type="button" data-type="minus" data-field="quantity">
+									<i class="fa-solid fa-minus"></i>
+								</button>
+							</span>
+							<input type="text" class="form-control input-number" id="quantity" name="quantity" value="1" min="1" max="100">
+							<span class="input-group-btn">
+								<button class="quantity-right-plus btn btn-outline-info btn-number" type="button" data-type="plus" data-field="quantity">
+									<i class="fa-solid fa-plus"></i>
+								</button>
+							</span>
 						</div>
 					</div>
 				</div>
@@ -39,8 +54,8 @@
 						Ajouter au panier
 					</a>
 				</div>
-				<div class="mt-2 d-flex">
-					<a href="{{ route('cart.add', $produit->id) }}" class="text-decoration-none text-info"><i class="fa fa-heart fs-6"></i> Ajouter à la liste de souhaits</a>
+				<div class="mt-3 d-flex">
+					<a href="{{ route('wishlist.add', $produit->id) }}" class="text-info"><i class="fa fa-heart fs-6"></i> Ajouter à la liste de souhaits</a>
 				</div>
 			</div>
 			{{-- Colonne informations --}}

@@ -128,14 +128,6 @@
 }
 .second-navbar .nav-link:hover {
     color: #6DE9EF;
-    transition: .5s ease-out;
-}
-.nav-item .fa-house {
-    color: #6DE9EF;
-}
-.nav-item .fa-house:hover {
-    color: #fff;
-    transition: .5s ease-out;
 }
 .navbar-nav {
     display: flex;

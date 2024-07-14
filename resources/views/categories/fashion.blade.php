@@ -3,12 +3,24 @@
 @section('content')
 	<!-- Page de la catégorie Mode -->
 
-	{{-- Condition si un produit est ajouté dans le panier ou sur la liste de souhaits, une alerte verte avec message sera affiché --}}
+	{{-- Condition si un produit est ajouté dans le wishlist ou sur la liste de souhaits, une alerte verte avec message sera affiché --}}
 	@if(session('success'))
-		<div class="alert alert-success">
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
 			{{ session('success') }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		</div>
 	@endif
+
+	<div class="container mt-5">
+		<nav aria-label="breadcrumb">
+	  		<ol class="breadcrumb">
+	    		<li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="/">Accueil</a></li>
+	    		<li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="/boutique">Boutique</a></li>
+	    		<li class="breadcrumb-item active text-uppercase" aria-current="page">Mode</li>
+	  		</ol>
+		</nav>
+	</div>
+
 	<div class="container mt-5">
 		<div class="d-flex justify-content-between align-items-center mb-4">
 			<h3>Les produits de la catégorie : Mode</h3>

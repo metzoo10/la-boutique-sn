@@ -194,7 +194,7 @@
                 <ul>
                     <li><a href="/about">À Propos</a></li>
                     <li><a href="/privacy-policy">Politique de confidentialité</a></li>
-                    <li><a href="#">Termes & Conditions</a></li>
+                    <li><a href="/terms-conditions">Termes & Conditions</a></li>
                     <li><a href="/return-policy">Politique de retour</a></li>
                 </ul>
             </div>

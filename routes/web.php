@@ -14,6 +14,9 @@ Route::get('/accueil', function () {
 // Routage de redirection de la page d'accueil
 Route::redirect('/', '/accueil');
 
+// Routage de la page de Résultats de la recherche "search"
+Route::get('/search', [ProductController::class, 'search'])->name('produits.search');
+
 // Routage de la page "Boutique" avec la fonction "index" qui récupère tous les produits
 Route::get('/boutique', [ProductController::class, 'index'])->name('boutique.index');
 
@@ -22,7 +25,7 @@ Route::get('/detail/{id}', [ProductController::class, 'show']);
 
 // Routage de la page à propos
 Route::get('/about', function () {
-    return view('a-propos');
+    return view('about');
 });
 
 // Routage de la page de commande
@@ -76,6 +79,11 @@ Route::get('/privacy-policy', function () {
 // Routage de la page de retours
 Route::get('/return-policy', function () {
     return view('return-policy');
+});
+
+// Routage de la page des termes et conditions
+Route::get('/terms-conditions', function () {
+    return view('terms-conditions');
 });
 
 // Routage de la page de compte

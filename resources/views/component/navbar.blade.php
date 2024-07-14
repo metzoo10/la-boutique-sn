@@ -5,9 +5,9 @@
     </a>
     <!-- Barre de recherche -->
     <div class="collapse navbar-collapse justify-content-center">
-        <form class="form-inline search-bar">
+        <form action="{{ route('produits.search') }}" method="GET" class="form-inline search-bar">
             <div class="input-group">
-                <input class="form-control" type="search" placeholder="Recherchez ici..." aria-label="Search">
+                <input id="searchInput" name="query" class="form-control" type="search" placeholder="Recherchez ici..." aria-label="Search">
                 <div class="dropdown">
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Toutes les catégories 
@@ -31,10 +31,20 @@
     <div class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav">
             <li class="nav-item wishlist">
-                <a class="nav-link" href="/wishlist"><i class="fa fa-heart"></i> Liste de souhaits <span class="badge badge-secondary">0 item</span></a>
+                <a class="nav-link" href="/wishlist"><i class="fa fa-heart"></i> Liste de souhaits 
+                    @if ($wishlistItemCount > 0)
+                    <span class="badge badge-secondary">{{ $wishlistItemCount }}
+                    </span>
+                    @endif
+                </a>
             </li>
             <li class="nav-item cart">
-                <a class="nav-link" href="/panier"><i class="fa fa-shopping-cart"></i> Panier <span class="badge badge-secondary">4 items</span></a>
+                <a class="nav-link" href="/panier"><i class="fa fa-shopping-cart"></i> Panier 
+                    @if ($cartItemCount > 0)
+                    <span class="badge badge-secondary">{{ $cartItemCount }}
+                    </span>
+                    @endif
+                </a>
             </li>
         </ul>
     </div>
