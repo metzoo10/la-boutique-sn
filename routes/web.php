@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\CategoryController;
+
 
 // Routage de la page d'accueil
 Route::get('/accueil', function () {
@@ -62,14 +64,16 @@ Route::get('/thankyou', function () {
 });
 
 // Routage de la page de connexion
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [AuthController::class,'Formlogin'])->name('auth.Formlogin');
+Route::post('/login', [AuthController::class,'traitementLogin'])->name('auth.traitementLogin');
+
+// ROUTAGE DE DECONNECTION
+Route::get('/logout', [AuthController::class,'logout'])->name('logout');
 
 // Routage de la page d'inscription
-Route::get('/register', function () {
-    return view('register');
-});
+Route::get('/register',  [AuthController::class, 'formRegister'])->name('auth.formRegister');
+Route::post('/register',  [AuthController::class, 'inscription'])->name('auth.inscription');
+
 
 // Routage de la page de confidentialité
 Route::get('/privacy-policy', function () {

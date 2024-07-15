@@ -14,14 +14,23 @@
 
 	<div class="container mt-5 mb-5 border border-secondary py-4">
 		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Connectez-vous à votre compte</div>
-		<form>
+		<form method="POST" action="{{route('auth.Formlogin')}}">
+			@csrf
 			<div class="mb-3">
 				<label for="exampleInputEmail1" class="form-label fw-light mb-3">Adresse e-mail </label>
-				<input type="email" class="form-control border-info" id="exampleInputEmail1" placeholder="Tapez votre adresse e-mail">
+				<input type="email" name="email" class="form-control border-info" id="exampleInputEmail1" value="{{old('email')}}" placeholder="Tapez votre adresse e-mail">
+				@error('email')
+				{{$message}}
+					
+				@enderror
 			</div>
 			<div class="mb-3">
 				<label for="exampleInputPassword1" class="form-label fw-light mb-3">Mot de passe </label>
-				<input type="password" class="form-control border-info" id="exampleInputPassword1" placeholder="********">
+				<input type="password" name="password" class="form-control border-info" id="exampleInputPassword1" placeholder="********">
+				@error('password')
+				{{$message}}
+					
+				@enderror
 			</div>
 			<div class="mb-3 form-check">
 				<input type="checkbox" class="form-check-input" id="exampleCheck1">

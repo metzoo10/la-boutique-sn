@@ -75,7 +75,23 @@
             </li>
             
         </ul>
+        @auth
         <ul class="navbar-nav ml-auto">
+            <form action="{{route('logout')}}" method="POST">
+                
+                @csrf
+            
+                <li class="nav-item">
+                    <a class="nav-link connect-link" href="{{route('logout')}}">Se deconnecter</a>
+                </li>
+            </form>
+           
+            
+        </ul>
+            
+        @endauth
+        @guest
+            <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link connect-link" href="/login">Se connecter</a>
             </li>
@@ -83,5 +99,7 @@
                 <a class="nav-link register-link" href="/register">S'inscrire</a>
             </li>
         </ul>
+        @endguest
+        
     </div>
 </nav>
