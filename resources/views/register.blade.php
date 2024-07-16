@@ -12,6 +12,17 @@
 		</nav>
 	</div>
 
+    @if ($errors->any())
+        <div>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+
 	<div class="container mt-5 mb-5 border border-secondary py-4">
 		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Créer un compte</div>
 		<div class="h6 mt-2 mb-4 text-secondary">Informations personnelles</div>
@@ -33,6 +44,22 @@
 					
 				@enderror
 				<div id="emailHelp"  class="form-text">Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</div>
+			</div>
+			<div class="mb-3">
+				<label for="exampleInputEmail1" class="form-label fw-light mb-3">Adresse <span class="text-info">*</span></label>
+				<input type="text" name="adresse" class="form-control border-info" id="exampleInputEmail1" value="{{old('adresse')}}" placeholder="Tapez votre adresse" aria-describedby="emailHelp">
+				@error('adresse')
+				{{$message}}
+					
+				@enderror
+			</div>
+			<div class="mb-3">
+				<label for="exampleInputEmail1" class="form-label fw-light mb-3">Telephone <span class="text-info">*</span></label>
+				<input type="text" name="telephone" class="form-control border-info" id="exampleInputEmail1" value="{{old('tel')}}" placeholder="Tapez votre numero" aria-describedby="emailHelp">
+				@error('telephone')
+				{{$message}}
+					
+				@enderror
 			</div>
 			<div class="mb-3">
 				<label for="exampleInputPassword1" class="form-label fw-light mb-3">Mot de passe<span class="text-info">*</span></label>
@@ -61,7 +88,7 @@
 					<input type="password" class="form-control border-info" id="exampleInputPassword1" placeholder="Confirmez le mot de passe">
 				</div>
 			</div> --}}
-			<button type="submit" class="btn btn-info mt-4 mb-3">Se connecter</button>
+			<button type="submit" class="btn btn-info mt-4 mb-3">S'inscrire</button>
 		</form>
 	</div>
 @endsection
