@@ -3,28 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product;
+use App\Models\Produit;
 use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
     public function addToCart($id)
     {
-        $produit = Product::findOrFail($id);
+        $produit = Produit::findOrFail($id);
+        
+        
         $cart = Session::get('cart', []);
 
         if (isset($cart[$id])) {
             $cart[$id]['quantity']++;
         } else {
             $cart[$id] = [
-                "nom" => $produit->nom,
+                "nom" => $produit->nomProd,
                 "quantity" => 1,
                 "stock" => $produit->stock,
                 "prix" => $produit->prix,
                 "description" => $produit->description,
                 "info" => $produit->info,
                 "image" => $produit->image,
-                "categorie" => $produit->categorie
+                
             ];
         }
 
