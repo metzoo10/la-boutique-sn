@@ -52,14 +52,20 @@
 			@foreach ($produits as $produit)
 				<div class="col-md-4 mb-4">
 					<div class="card h-100">
-						<img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nom }}">
+						<img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}">
 						<div class="card-body">
 							{{-- Lien qui amène vers la page de détail du produit avec son id comme paramètre --}}
 							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">
-								<h5 class="card-title">{{ $produit->nom }}</h5>
+								<h5 class="card-title">{{ $produit->nomProd }}</h5>
 							</a>
 							<p class="card-text fw-medium text-info">{{ $produit->prix }} FCFA</p>
-							<p class="card-text fs-6 text-muted">{{ $produit->categorie }}</p>
+
+							<p class="card-text fs-6 text-muted">@if ($produit->categories)
+								{{ $produit->categories>nomCateg }} - 
+							@else
+								<em>Sans catégorie</em> - 
+							@endif
+						</p>
 						</div>
 						<div class="card-footer">
 							<div class="d-grid gap-2">
@@ -77,7 +83,7 @@
 		</div>
 		{{-- Pagination avec links() --}}
 		<div class="d-flex justify-content-center mb-3">
-			{{ $produits->links() }}
+			{{ $produits->appends(['sort' => $sort])->links()}}
 		</div>
 	</div>
 @endsection

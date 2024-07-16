@@ -23,11 +23,11 @@ class ProduitController extends Controller
  
 
 // recuperation des produits plus pagination
-$produits = Produit::paginate(9);
+// $produits = Produit::paginate(9);
 
 
         // utilise les conditions switch pour faire des tris par catégorie, nom et prix.
-        $query = Produit::query();
+        $query = Produit::with('categories');
   
         $sort = $request->input('sort', '');
         
@@ -82,7 +82,7 @@ $produits = Produit::paginate(9);
         // }
 
         // enregistrer la requête dans $produits puis crée une pagination de 12 produits par page avec "paginate".
-        // $produits = $query->paginate(12);
+        $produits = $query->paginate(9);
 
         // récupère les catégories de manière distincte.
         // $categories = Produit::select('categorie')->distinct()->get();

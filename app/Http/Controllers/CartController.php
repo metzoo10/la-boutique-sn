@@ -33,8 +33,9 @@ class CartController extends Controller
         Session::put('cart', $cart);
         return redirect()->back()->with('success', 'Produit ajouté au panier avec succès!');
     }
-    public function showCart()
+    public function showCart(Request $request)
     {
+     
         $cart = Session::get('cart', []);
         return view('panier', compact('cart'));
     }
