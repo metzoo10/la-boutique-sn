@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\WishlistController;
