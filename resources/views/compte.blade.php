@@ -12,6 +12,15 @@
 		</nav>
 	</div>
 
-	<h1>Nos produits arrivent bientôt !</h1>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, fuga.</p>
+	 @auth <h1>Bonjour {{Auth::user()->name}} </h1>
+
+
+
+	 
+	 	@guest
+			
+		@endguest
+	    
+	 @endauth
+	
 @endsection

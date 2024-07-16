@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
-use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\WishlistController;
 
 
 // Routage de la page d'accueil
@@ -17,13 +18,13 @@ Route::get('/accueil', function () {
 Route::redirect('/', '/accueil');
 
 // Routage de la page de Résultats de la recherche "search"
-Route::get('/search', [ProductController::class, 'search'])->name('produits.search');
+Route::get('/search', [ProduitController::class, 'search'])->name('produits.search');
 
 // Routage de la page "Boutique" avec la fonction "index" qui récupère tous les produits
-Route::get('/boutique', [ProductController::class, 'index'])->name('boutique.index');
+Route::get('/boutique', [ProduitController::class, 'index'])->name('boutique.index');
 
 // Routage de la page de détail d'un produit avec comme paramètre, son id
-Route::get('/detail/{id}', [ProductController::class, 'show']);
+Route::get('/detail/{id}', [ProduitController::class, 'show']);
 
 // Routage de la page à propos
 Route::get('/about', function () {

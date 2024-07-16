@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Produit;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
-{ 
-// Fonction "show" avec paramètre $id qui récupère dans un tableau compact, les produits par leurs id.
+class ProduitController extends Controller
+{
+    // Fonction "show" avec paramètre $id qui récupère dans un tableau compact, les produits par leurs id.
 
     public function show($id)
     {
-        $produit = Product::find($id);
+        $produit = Produit::find($id);
 
         return view('detail', compact('produit'));
     }
@@ -21,7 +21,7 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         // utilise les conditions switch pour faire des tris par catégorie, nom et prix.
-        $query = Product::query();
+        $query = Produit::query();
 
         if ($request->has('sort')) {
             $sortOption = $request->input('sort');
@@ -51,7 +51,7 @@ class ProductController extends Controller
         $produits = $query->paginate(12);
 
         // récupère les catégories de manière distincte.
-        $categories = Product::select('categorie')->distinct()->get();
+        $categories = Produit::select('categorie')->distinct()->get();
 
         // envoie un tableau des résultats de requête à la vue "Boutique".
         return view('boutique', compact('produits' ,'categories'));
@@ -59,8 +59,12 @@ class ProductController extends Controller
     public function search(Request $request)
     {
         $query = $request->input('query');
-        $produits = Product::where('nom', 'LIKE', "%$query%")->get();
+        $produits = Produit::where('nom', 'LIKE', "%$query%")->get();
 
         return view('search', compact('produits'));
     }
+    
 }
+
+
+

@@ -24,6 +24,12 @@ class User extends Authenticatable
         'telephone'
     ];
 
+
+    public function Commandes()
+    {
+        return $this->hasMany(Commande::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
