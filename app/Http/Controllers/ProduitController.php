@@ -20,7 +20,7 @@ class ProduitController extends Controller
 
     public function index(Request $request)
     {
- 
+
 
 // recuperation des produits plus pagination
 // $produits = Produit::paginate(9);
@@ -83,6 +83,7 @@ class ProduitController extends Controller
 
         // enregistrer la requête dans $produits puis crée une pagination de 12 produits par page avec "paginate".
         $produits = $query->paginate(9);
+        
 
         // récupère les catégories de manière distincte.
         // $categories = Produit::select('categorie')->distinct()->get();

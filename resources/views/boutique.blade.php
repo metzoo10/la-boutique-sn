@@ -19,6 +19,7 @@
 	  		</ol>
 		</nav>
 	</div>
+	
 
 	<div class="container mt-5">
 		<div class="d-flex justify-content-between align-items-center mb-4">
@@ -61,7 +62,7 @@
 							<p class="card-text fw-medium text-info">{{ $produit->prix }} FCFA</p>
 
 							<p class="card-text fs-6 text-muted">@if ($produit->categories)
-								{{ $produit->categories>nomCateg }} - 
+								{{ $produit->categories->nomCateg }} - 
 							@else
 								<em>Sans catégorie</em> - 
 							@endif
