@@ -52,23 +52,25 @@ class AuthController extends Controller
 // FONCTION POUR LE TRAITEMENT DE L'INSCRIPTION  DU CLIENT
     public function inscription( RegisterRequest $request)
     {
+        
         // VALIDATION DES DONNEES ENTRER AU NIVEAU DU FORMULAIRE GRACE AU "RegisterRequest"
-       $user = $request->validated();
-// creation ou insertion du client ou user 
-        if ($user) {
-            $user = User::create([
+       $validator = $request->validated();
+       
+
+        // creation ou insertion du client ou user 
+        
+            User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'adresse' =>$request->adresse,
+            'telephone' => $request->telephone,
             'password' => Hash::make($request->password),
             
         ]);
 // REDIRECTION VERS LA PAGE de connexion
          return redirect()->intended(route('auth.Formlogin'));
 
-        }else {
-            return to_route('auth.Formlogin');
-        }
-
+        
     }
 
     // FONCTION POUR DECONNEXION
