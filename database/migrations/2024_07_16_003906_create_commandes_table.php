@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('commandes', function (Blueprint $table) {
+            $table->id(); 
             $table->string('numero_commande');
-            $table->decimal('montant_total', 8, 2);
+            $table->integer('montant_total');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
