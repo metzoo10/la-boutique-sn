@@ -91,10 +91,12 @@ class ProduitController extends Controller
         // envoie un tableau des résultats de requête à la vue "Boutique".
         return view('boutique', compact('produits','sort'));
     }
+
+    // FONCTION DE RECHERCE 
     public function search(Request $request)
     {
         $query = $request->input('query');
-        $produits = Produit::where('nom', 'LIKE', "%$query%")->get();
+        $produits = Produit::where('nomProd', 'LIKE', "%$query%")->get();
 
         return view('search', compact('produits'));
     }
