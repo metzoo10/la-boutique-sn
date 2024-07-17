@@ -23,7 +23,7 @@ Route::get('/search', [ProduitController::class, 'search'])->name('produits.sear
 Route::get('/boutique', [ProduitController::class, 'index'])->name('boutique.index');
 
 // Routage de la page de détail d'un produit avec comme paramètre, son id
-Route::get('/detail/{id}', [ProduitController::class, 'show']);
+Route::get('/detail/{id}', [ProduitController::class, 'show'])->name('detail');
 
 // Routage de la page à propos
 Route::get('/about', function () {
