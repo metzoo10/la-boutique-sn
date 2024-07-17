@@ -2,28 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Produit;
 use Illuminate\Support\Facades\Session;
 
 class WishlistController extends Controller
 {
     public function addToWishlist($id)
     {
-        $produit = Product::findOrFail($id);
+        $produit = Produit::findOrFail($id);
         $wishlist = Session::get('wishlist', []);
+      
 
         if (isset($wishlist[$id])) {
             $wishlist[$id];
         } else {
             $wishlist[$id] = [
-                "nom" => $produit->nom,
+                "nom" => $produit->nomProd,
                 "stock" => $produit->stock,
                 "prix" => $produit->prix,
                 "description" => $produit->description,
                 "info" => $produit->info,
                 "image" => $produit->image,
-                "categorie" => $produit->categorie
+               
             ];
         }
 

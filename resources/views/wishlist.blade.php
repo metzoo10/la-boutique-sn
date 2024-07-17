@@ -38,6 +38,7 @@
 				{{-- Boucle foreach pour afficher tout produit contenu sur le wishlist --}}
 				@foreach($wishlist as $id => $details)
 				<tr>
+					
 					<td><img src="{{ $details['image'] }}" alt="{{ $details['nom'] }}" width="50" height="50"></td>
 					<td>{{ $details['nom'] }}</td>
 					<td>{{ $details['prix'] }} FCFA</td>
