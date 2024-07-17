@@ -47,9 +47,10 @@
 		<div class="row">
 			{{-- Boucle foreach pour afficher chaque produit de catégorie "Beauté" --}}
 			@foreach ($produitsBeauty as $produit)
+			
 				<div class="col-md-4 mb-4">
 					<div class="card h-100">
-						<img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nom }}">
+						<img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}">
 						<div class="card-body">
 							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">
 								<h5 class="card-title">{{ $produit->nom }}</h5>

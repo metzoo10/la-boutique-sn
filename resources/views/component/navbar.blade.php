@@ -13,7 +13,7 @@
                         Toutes les catégories 
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/digital">Électroniques</a>
+                        <a class="dropdown-item" href="/digital">Electroniques</a>
                         <a class="dropdown-item" href="/fashion">Mode</a>
                         <a class="dropdown-item" href="/furniture">Meubles</a>
                         <a class="dropdown-item" href="/kidtoys">Jouets pour enfant</a>

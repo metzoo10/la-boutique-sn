@@ -49,13 +49,13 @@
 			@foreach ($produitsDigital as $produit)
 				<div class="col-md-4 mb-4">
 					<div class="card h-100">
-						<img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nom }}">
+						<a href="{{route('detail',$produit->id)}}"><img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>	
 						<div class="card-body">
 							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">
-								<h5 class="card-title">{{ $produit->nom }}</h5>
+								<h5 class="card-title">{{ $produit->nomProd }}</h5>
 							</a>
 							<p class="card-text fw-medium text-info">{{ $produit->prix }} FCFA</p>
-							<p class="card-text fs-6 text-muted">{{ $produit->categorie }}</p>
+							<p class="card-text fs-6 text-muted">{{ $produit->category_id }}</p>
 						</div>
 						<div class="card-footer">
 							<div class="d-grid gap-2">
