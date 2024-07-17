@@ -12,6 +12,7 @@
 		</nav>
 	</div>
 
+	@auth
 	<div class="container mt-5 mb-5">
 		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Adresse de facturation</div>
 		<form class="row g-3">
@@ -89,4 +90,14 @@
 			</div>
 		</div>
 	</div>
+		
+	@endauth
+	@guest
+	<div class="alert alert-warning text-center alert-dismissible fade show" role="alert">
+		<h1>devez-vous connecter pour effectuer votre commande !!</h1>
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	@endguest
+
+	
 @endsection
