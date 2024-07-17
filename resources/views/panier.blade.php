@@ -65,11 +65,12 @@
 			</tbody>
 			
 		</table>
-		{{-- Condition else si le panier ne contient pas de produit --}}
-		@else
-			<p class="text-center">Votre panier est vide.</p>
-		@endif
 		<a class="btn btn-primary mt-3" href="{{ route('boutique.index') }}">Continuer vos achats</a>
 		<a class="btn btn-outline-success mt-3 " href="/checkout">Commander</a>
+		{{-- Condition else si le panier ne contient pas de produit --}}
+		@else
+			<p class="text-center">Votre panier est vide.</p>			
+		@endif
+		
 	</div>
 @endsection
