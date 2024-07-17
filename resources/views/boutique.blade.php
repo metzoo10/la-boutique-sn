@@ -53,7 +53,7 @@
 			@foreach ($produits as $produit)
 				<div class="col-md-4 mb-4">
 					<div class="card h-100">
-						<img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}">
+					<a href="{{route('detail',$produit->id)}}"><img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>	
 						<div class="card-body">
 							{{-- Lien qui amène vers la page de détail du produit avec son id comme paramètre --}}
 							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">
