@@ -40,7 +40,7 @@
 		    <label for="inputZip" class="form-label fw-light">Zip</label>
 		    <input type="text" class="form-control" id="inputZip">
 		  </div>		  
-		</form>
+		
 
 		<div class="row g-3 mt-5 mb-5 border border-secondary py-4">
 			<div class="col-md-6 p-4">
@@ -88,6 +88,7 @@
 			<div class="d-grid gap-2 col-6 mx-auto mt-4">
 			  <button class="btn btn-info" type="submit">Passer votre commande</button>
 			</div>
+		</form>
 		</div>
 	</div>
 		
