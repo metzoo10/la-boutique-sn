@@ -36,7 +36,7 @@
 		  </div>
 		  <div class="col-6">
 		    <label for="inputPhone2" class="form-label fw-light">Téléphone<span class="text-info"></span></label>
-		    <input type="number" class="form-control" id="inputPhone2" value="{{Auth::user()->telephone}}" >
+		    <input type="number" class="form-control" id="inputPhone2" value="{{Auth::user()->telephone}}"readonly >
 		  </div>
 		  
 		
