@@ -91,9 +91,7 @@ Route::get('/terms-conditions', function () {
 });
 
 // Routage de la page de compte
-Route::get('/compte', function () {
-    return view('compte');
-});
+Route::get('/compte', [AuthController::class, 'Moncompte'])->name('compte');
 
 // Routage de la page de catégorie "Beauté" avec la fonction "produitsBeauty" qui récupère tous les produits de catégories "Beauté"
 Route::get('/beauty', [CategoryController::class, 'produitsBeauty']);

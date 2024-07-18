@@ -84,4 +84,10 @@ class AuthController extends Controller
         return redirect('/');
     }
 
+    public function Moncompte()
+    {
+        
+        return view('compte');
+    }
+
 }
