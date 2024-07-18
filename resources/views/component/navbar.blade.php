@@ -58,9 +58,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="/"><i class="fa-solid fa-house"></i></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/compte"><i class="fa-solid fa-user"></i></a>
-            </li>
+           
+            
             <li class="nav-item">
                 <a class="nav-link" href="/boutique">Boutique</a>
             </li>
@@ -77,21 +76,26 @@
         </ul>
         @auth
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+               <h5> <a class="nav-link connect-link bold" href="{{route('compte')}}">{{Auth::user()->name}}</a></h5>
+            </li>
             <form action="{{route('logout')}}" method="POST">
-                
                 @csrf
-            
-                <li class="nav-item">
+              <li class="nav-item">
                     <a class="nav-link connect-link" href="{{route('logout')}}">Se deconnecter</a>
-                </li>
+                </li>  
+                
             </form>
            
-            
         </ul>
             
         @endauth
         @guest
             <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/compte"><i class="fa-solid fa-user"></i></a>
+                </li>
             <li class="nav-item">
                 <a class="nav-link connect-link" href="/login">Se connecter</a>
             </li>
