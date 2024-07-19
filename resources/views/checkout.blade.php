@@ -18,30 +18,19 @@
 		<form class="row g-3">
 		  <div class="col-md-6">
 		    <label for="inputNom4" class="form-label fw-light">Nom<span class="text-info">*</span></label>
-		    <input type="text" class="form-control" id="inputNom4">
+		    <input type="text" class="form-control" id="inputNom4"readonly value="{{Auth::user()->name}}">
 		  </div>
-		  <div class="col-md-6">
-		    <label for="inputPrenom4" class="form-label fw-light">Prénom<span class="text-info">*</span></label>
-		    <input type="text" class="form-control" id="inputPrenom4">
-		  </div>
+		  
 		  <div class="col-12">
 		    <label for="inputAddress" class="form-label fw-light">Adresse<span class="text-info">*</span></label>
-		    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+		    <input type="text" class="form-control" id="inputAddress" readonly value="{{Auth::user()->adresse}}">
 		  </div>
 		  <div class="col-12">
 		    <label for="inputPhone2" class="form-label fw-light">Téléphone<span class="text-info">*</span></label>
-		    <input type="number" class="form-control" id="inputPhone2" placeholder="Format à 9 chiffres">
+		    <input type="number" class="form-control" id="inputPhone2" readonly value="{{Auth::user()->telephone}}">
 		  </div>
-		  <div class="col-md-6">
-		    <label for="inputCity" class="form-label fw-light">Ville</label>
-		    <input type="text" class="form-control" id="inputCity">
-		  </div>
-		  <div class="col-md-2">
-		    <label for="inputZip" class="form-label fw-light">Zip</label>
-		    <input type="text" class="form-control" id="inputZip">
-		  </div>		  
-		
-
+		  
+	
 		<div class="row g-3 mt-5 mb-5 border border-secondary py-4">
 			<div class="col-md-6 p-4">
 				<div class="h6 mt-2 mb-4 text-muted border-bottom border-secondary">Méthode de paiement</div>
@@ -67,6 +56,7 @@
 				  </label>
 				  <img class="rounded" src="/images/brands/visa.jpg" alt="Logo Visa" title="Visa" height="30px">
 				</div>
+				{{-- CALCULER LE PRIX TOTAL A FAIRE  --}}
 				<h6 class="mt-3">Total : <b>5000</b> FCFA</h6>
 			</div>
 			<div class="col-md-6 p-4">
