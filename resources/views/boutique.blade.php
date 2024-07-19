@@ -5,8 +5,14 @@
 
 	{{-- Condition si un produit est ajouté dans le wishlist ou sur la liste de souhaits, une alerte verte avec message sera affiché --}}
 	@if(session('success'))
-		<div class="alert alert-success alert-dismissible fade show" role="alert">
+		<div class="alert alert-success text-center alert-dismissible fade show" role="alert">
 			{{ session('success') }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	@endif
+	@if(session('connexion_success'))
+		<div class="alert alert-success text-center alert-dismissible fade show" role="alert">
+		<h4>Bienvenu {{Auth::user()->name}} {{session('connexion_success') }} </h4>
 			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		</div>
 	@endif

@@ -31,7 +31,7 @@ class AuthController extends Controller
     //    SI OUI ON CREE UNE SESSION
         $request->session()->regenerate();
 // REDIRECTION VERS LA PAGE DEMANDER OUBIEN LA DIREGER VERS BOUTIQUE
-        return redirect()->intended(route('boutique.index'));
+        return redirect()->intended(route('boutique.index'))->with('connexion_success',' ,Vous etes connecter avec success');
 
      } 
     //  SINON REDIRECTION SUR LA PAGE  
