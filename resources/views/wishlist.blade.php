@@ -63,7 +63,16 @@
 		</table>
 		{{-- Condition else si le wishlist ne contient pas de produit --}}
 		@else
-			<p class="text-center">Votre liste de souhaits est vide.</p>
+			<div class="d-flex justify-content-center align-items-center mb-3" style="height: 80px;">
+				<div class="bg-white text-white d-flex justify-content-center align-items-center rounded-circle" style="width: 80px; height: 80px;">
+					<i class="fa-solid fa-heart fs-2 text-info"></i>
+				</div>
+			</div>
+			<p class="text-center fw-bold mt-2">Votre liste d'envies est vide !</p>
+			<p class="text-center">Vous avez trouvé quelque chose que vous aimez ?<br> Tapez sur le bouton "Ajouter à la liste d'envies" en-dessous de l'article pour l'ajouter à votre liste d'envies!<br> Tous vos articles sauvegardés apparaîtront ici.</p>
+			<div class="d-grid gap-2 col-6 mx-auto mt-5 mb-4">
+				<a href="/boutique" class="btn btn-info">Continuer vos achats</a>
+			</div>
 		@endif
 	</div>
 @endsection
