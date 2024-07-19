@@ -27,7 +27,7 @@
 	</div>
 	
 
-	<div class="container mt-5">
+	<div class="container-fluid mt-5">
 		<div class="d-flex justify-content-between align-items-center mb-4">
 			<h3>Tous les produits</h3>
 			<div>
@@ -57,8 +57,8 @@
 		<div class="row">
 			{{-- Boucle foreach pour afficher tous les produits avec leur nom, image, prix et catégorie --}}
 			@foreach ($produits as $produit)
-				<div class="col-md-4 mb-4">
-					<div class="card h-100">
+			<div class="col-md-3 mb-3">
+				<div class="card card_heit">
 					<a href="{{route('detail',$produit->id)}}"><img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>	
 						<div class="card-body">
 							{{-- Lien qui amène vers la page de détail du produit avec son id comme paramètre --}}

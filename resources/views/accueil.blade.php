@@ -10,7 +10,7 @@
 		</div>
 	@endif
 
-	<div class="container mt-5 mb-5">
+	<div class="container-fluid mt-5 mb-5">
 
 		<div class="p-3 my-3 bg-info">
 			<h5 class="m-0">Bienvenue chez <span class="text-uppercase">la boutique.sn</span> !</h5>
@@ -54,9 +54,9 @@
 		</div>
 		<div class="row">
 			@foreach ($produits as $produit)
-				<div class="col-md-4 mb-4">
-					<div class="card h-100">
-						<img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}">
+				<div class="col-md-3 mb-3">
+					<div class="card card_heit">
+						<a href="{{route('detail',$produit->id)}}"><img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>
 						<div class="card-body">
 							{{-- Lien qui amène vers la page de détail du produit avec son id comme paramètre --}}
 							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">

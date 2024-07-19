@@ -21,7 +21,7 @@
 		</nav>
 	</div>
 
-	<div class="container mt-5">
+	<div class="container-fluid mt-5">
 		<div class="d-flex justify-content-between align-items-center mb-4">
 			<h3>Les produits de la catégorie : {{ $categorie->nomCateg }}</h3>
 			<div>
@@ -47,9 +47,10 @@
 		<div class="row">
 			{{-- Boucle foreach pour afficher chaque produit de catégorie "Beauté" --}}
 			@foreach ($produits as $produit)
-				<div class="col-md-4 mb-4">
-					<div class="card h-100">
-						<img src="/{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}">
+			
+			<div class="col-md-3 mb-3">
+				<div class="card card_heit">
+					<a href="{{route('detail',$produit->id)}}"><img src="/{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>	
 						<div class="card-body">
 							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">
 								<h5 class="card-title">{{ $produit->nomProd }}</h5>

@@ -10,7 +10,7 @@ class ProduitController extends Controller
     // Fonction "featured" qui récupère 6 produits de manière aléatoire
     public function featured()
     {
-        $produits = Product::inRandomOrder()->take(6)->get();
+        $produits = Produit::inRandomOrder()->take(8)->get();
 
         return view('accueil', compact('produits'));
     }
@@ -90,7 +90,7 @@ class ProduitController extends Controller
         // }
 
         // enregistrer la requête dans $produits puis crée une pagination de 12 produits par page avec "paginate".
-        $produits = $query->paginate(9);
+        $produits = $query->paginate(12);
         
 
         // récupère les catégories de manière distincte.

@@ -11,8 +11,9 @@ class CategoryController extends Controller
     public function show($id)
     {
         $categorie = Category::findOrFail($id);
-        $produits = $categorie->produits;
-
+   
+        $produits = $categorie->produit;
+        
         return view('categories.show', compact('categorie', 'produits'));
     }
 }

@@ -9,9 +9,7 @@ use App\Http\Controllers\WishlistController;
 
 
 // Routage de la page d'accueil
-Route::get('/accueil', function () {
-    return view('accueil');
-});
+Route::get('/accueil', [ProduitController::class, 'featured'])->name('accueil');
 
 // Routage de redirection de la page d'accueil
 Route::redirect('/', '/accueil');

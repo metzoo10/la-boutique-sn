@@ -28,8 +28,8 @@
 		@else
 			<div class="row">
 				@foreach($produits as $produit)
-					<div class="col-md-4 mb-4">
-						<div class="card h-100">
+				<div class="col-md-3 mb-3">
+					<div class="card card_heit">
 							<a href="{{route('detail',$produit->id)}}"><img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>	
 
 							<div class="card-body">
