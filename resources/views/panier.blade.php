@@ -69,7 +69,16 @@
 		<a class="btn btn-outline-success mt-3 " href="/checkout">Commander</a>
 		{{-- Condition else si le panier ne contient pas de produit --}}
 		@else
-			<p class="text-center">Votre panier est vide.</p>			
+			<div class="d-flex justify-content-center align-items-center mb-3" style="height: 80px;">
+				<div class="bg-white text-white d-flex justify-content-center align-items-center rounded-circle" style="width: 80px; height: 80px;">
+					<i class="fa-solid fa-cart-shopping fs-2 text-info"></i>
+				</div>
+			</div>
+			<p class="text-center fw-bold mt-2">Votre panier est vide !</p>
+			<p class="text-center">Parcourez notre boutique et nos catégories et découvrez nos meilleures offres!</p>
+			<div class="d-grid gap-2 col-6 mx-auto mt-5 mb-4">
+				<a href="/boutique" class="btn btn-info">Commencez vos achats</a>
+			</div>
 		@endif
 		
 	</div>
