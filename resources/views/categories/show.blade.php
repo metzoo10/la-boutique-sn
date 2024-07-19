@@ -1,7 +1,7 @@
 @extends('layout.main')
-@section('title', 'La Boutique.sn votre boutique en ligne numéro 1 - Catégorie : Bricolage')
+@section('title', 'La Boutique.sn votre boutique en ligne numéro 1 - Catégorie : ' .$categorie->nomCateg)
 @section('content')
-	<!-- Page de la catégorie Bricolage -->
+	<!-- Page de catégorie -->
 
 	{{-- Condition si un produit est ajouté dans le wishlist ou sur la liste de souhaits, une alerte verte avec message sera affiché --}}
 	@if(session('success'))
@@ -16,14 +16,14 @@
 	  		<ol class="breadcrumb">
 	    		<li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="/">Accueil</a></li>
 	    		<li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="/boutique">Boutique</a></li>
-	    		<li class="breadcrumb-item active text-uppercase" aria-current="page">Bricolage</li>
+	    		<li class="breadcrumb-item active text-uppercase" aria-current="page">{{ $categorie->nomCateg }}</li>
 	  		</ol>
 		</nav>
 	</div>
 
 	<div class="container mt-5">
 		<div class="d-flex justify-content-between align-items-center mb-4">
-			<h3>Les produits de la catégorie : Bricolage</h3>
+			<h3>Les produits de la catégorie : {{ $categorie->nomCateg }}</h3>
 			<div>
 				{{-- Formulaire avec option de tri par prix et nom, croissante ou décroissante --}}
 				<form method="GET" action="{{ route('boutique.index') }}" class="mb-3">
@@ -45,18 +45,16 @@
 			</div>
 		</div>
 		<div class="row">
-			{{-- Boucle foreach pour afficher chaque produit de catégorie "Bricolage" --}}
-			@foreach ($produitsTools as $produit)
+			{{-- Boucle foreach pour afficher chaque produit de catégorie "Beauté" --}}
+			@foreach ($produits as $produit)
 				<div class="col-md-4 mb-4">
 					<div class="card h-100">
-						<a href="{{route('detail',$produit->id)}}"><img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>	
-
+						<img src="/{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}">
 						<div class="card-body">
 							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">
 								<h5 class="card-title">{{ $produit->nomProd }}</h5>
 							</a>
 							<p class="card-text fw-medium text-info">{{ $produit->prix }} FCFA</p>
-							<p class="card-text fs-6 text-muted">{{ $produit->categorie }}</p>
 						</div>
 						<div class="card-footer">
 							<div class="d-grid gap-2">

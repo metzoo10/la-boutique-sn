@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class ProduitController extends Controller
 {
+    // Fonction "featured" qui récupère 6 produits de manière aléatoire
+    public function featured()
+    {
+        $produits = Product::inRandomOrder()->take(6)->get();
+
+        return view('accueil', compact('produits'));
+    }
+    
     // Fonction "show" avec paramètre $id qui récupère dans un tableau compact, les produits par leurs id.
 
     public function show($id)

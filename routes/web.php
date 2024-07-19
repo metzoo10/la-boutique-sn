@@ -93,20 +93,5 @@ Route::get('/terms-conditions', function () {
 // Routage de la page de compte
 Route::get('/compte', [AuthController::class, 'Moncompte'])->name('compte');
 
-// Routage de la page de catégorie "Beauté" avec la fonction "produitsBeauty" qui récupère tous les produits de catégories "Beauté"
-Route::get('/beauty', [CategoryController::class, 'produitsBeauty']);
-
-// Routage de la page de catégorie "Bricolage" avec la fonction "produitsTools" qui récupère tous les produits de catégories "Bricolage"
-Route::get('/tools', [CategoryController::class, 'produitsTools']);
-
-// Routage de la page de catégorie "Electroniques" avec la fonction "produitsDigital" qui récupère tous les produits de catégories "Electroniques"
-Route::get('/digital', [CategoryController::class, 'produitsDigital']);
-
-// Routage de la page de catégorie "Jouets pour enfant" avec la fonction "produitsKidtoys" qui récupère tous les produits de catégories "Jouets pour enfant"
-Route::get('/kidtoys', [CategoryController::class, 'produitsKidtoys']);
-
-// Routage de la page de catégorie "Meubles" avec la fonction "produitsFurniture" qui récupère tous les produits de catégories "Meubles"
-Route::get('/furniture', [CategoryController::class, 'produitsFurniture']);
-
-// Routage de la page de catégorie "Mode" avec la fonction "produitsMode" qui récupère tous les produits de catégories "Mode"
-Route::get('/fashion', [CategoryController::class, 'produitsMode']);
+// Routage de la page de catégories avec la fonction "show" qui gràce à l'id recupère le nom de la catégorie
+Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categories.show');

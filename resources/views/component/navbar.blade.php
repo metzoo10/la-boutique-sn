@@ -13,12 +13,9 @@
                         Toutes les catégories 
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/digital">Electroniques</a>
-                        <a class="dropdown-item" href="/fashion">Mode</a>
-                        <a class="dropdown-item" href="/furniture">Meubles</a>
-                        <a class="dropdown-item" href="/kidtoys">Jouets pour enfant</a>
-                        <a class="dropdown-item" href="/beauty">Beauté</a>
-                        <a class="dropdown-item" href="/tools">Bricolage</a>
+                        @foreach ($categories as $categorie)
+                            <a class="dropdown-item" href="{{ route('categories.show', $categorie->id) }}">{{ $categorie->nomCateg }}</a>
+                        @endforeach
                     </div>
                 </div>
                 <div class="input-group-append">
