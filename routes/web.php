@@ -3,9 +3,20 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
+
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\WishlistController;
+
+use App\Http\Controllers\Admin\CategorieController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\UtilisateurController;
+use App\Http\Controllers\Admin\CommandeController;
+use App\Http\Controllers\Admin\ProductController;
+
+
+
+
 
 
 // Routage de la page d'accueil
@@ -93,3 +104,33 @@ Route::get('/compte', [AuthController::class, 'Moncompte'])->name('compte');
 
 // Routage de la page de catégories avec la fonction "show" qui gràce à l'id recupère le nom de la catégorie
 Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categories.show');
+
+
+
+// ADMIN
+// ROUTE POUR ADMIN
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+
+    Route::get('/categories', [CategorieController::class, 'index'])->name('admin.categories.index');
+    Route::get('/createCateg', [CategorieController::class, 'create']);
+    Route::get('/edit/{category}', [CategorieController::class, 'edit'])->name('admin.categories.edit');
+    Route::post('/storeCateg', [CategorieController::class, 'store']);
+    Route::put('/update/{category}', [CategorieController::class, 'update'])->name('admin.categories.update');
+    Route::get('/destroy/{category}', [CategorieController::class, 'destroy'])->name('admin.categories.destroy');
+
+
+
+
+
+
+
+    Route::get('/produits', [ProductController::class,'index'])->name('admin.produits.index');
+    Route::get('/create', [ProductController::class,'create'])->name('admin.produits.create');
+    Route::post('/store', [ProductController::class,'store'])->name('admin.produits.store');
+    Route::get('/edit/{produit}', [ProductController::class,'edit'])->name('admin.produits.edit');
+    Route::delete('/destroy/{produit}', [ProductController::class,'destroy'])->name('admin.produits.destroy');
+    Route::put('/update/{produit}', [ProductController::class,'update'])->name('admin.produits.update');
+
+    Route::get('/commandes', [CommandeController::class])->name('admin.commandes.index');
+    Route::get('/utilisateurs', [UtilisateurController::class])->name('admin.utilisateurs.index');
