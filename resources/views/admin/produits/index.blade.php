@@ -19,7 +19,9 @@
                 <th>Nom</th>
                 <th>Prix</th>
                 <th>Catégorie</th>
+                <th>Image</th>
                 <th>Actions</th>
+                
             </tr>
         </thead>
         <tbody>

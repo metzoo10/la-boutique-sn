@@ -112,6 +112,7 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
+// ROUTE CATEGORY
     Route::get('/categories', [CategorieController::class, 'index'])->name('admin.categories.index');
     Route::get('/createCateg', [CategorieController::class, 'create']);
     Route::get('/edit/{category}', [CategorieController::class, 'edit'])->name('admin.categories.edit');
@@ -124,7 +125,7 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
 
 
 
-
+// ROUTE PRODUIT
     Route::get('/produits', [ProductController::class,'index'])->name('admin.produits.index');
     Route::get('/create', [ProductController::class,'create'])->name('admin.produits.create');
     Route::post('/store', [ProductController::class,'store'])->name('admin.produits.store');
@@ -132,5 +133,6 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
     Route::delete('/destroy/{produit}', [ProductController::class,'destroy'])->name('admin.produits.destroy');
     Route::put('/update/{produit}', [ProductController::class,'update'])->name('admin.produits.update');
 
+    
     Route::get('/commandes', [CommandeController::class])->name('admin.commandes.index');
     Route::get('/utilisateurs', [UtilisateurController::class])->name('admin.utilisateurs.index');
