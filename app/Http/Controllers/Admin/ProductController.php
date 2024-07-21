@@ -70,24 +70,40 @@ class ProductController extends Controller
 
     public function update(Request $request, $id)
     {
-        $request->validate([
+        
+       
+        $data = $request->validate([
             'nom' => 'required|string|max:255',
             'prix' => 'required|numeric',
             'categorie_id' => 'required|exists:categories,id',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-
+    
+      
+        
         $produit = Produit::findOrFail($id);
-        $data = $request->all();
 
         if ($request->hasFile('image')) {
             if ($produit->image) {
                 Storage::disk('public')->delete($produit->image);
             }
-            $data['image'] = $request->file('image')->store('produits', 'public');
-        }
 
-        $produit->update($data);
+            $fileName = time().$request->file('image')->getClientOriginalName();
+        $path = $request->file('image')->storeAs('images',$fileName,'public');
+        $data['image'] = '/storage/'.$path;
+           
+
+            $produit->update([
+                'nomProd' => $request->nom,
+                'prix' => $request->prix,
+                'image' => $data['image'],
+                'category_id' => $request->categorie_id,
+            ]);
+        }
+        
+
+       
+      
 
         return redirect()->route('admin.produits.index')->with('success', 'Produit mis à jour avec succès');
     }

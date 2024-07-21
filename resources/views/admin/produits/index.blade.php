@@ -28,7 +28,7 @@
             @foreach ($produits as $produit)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $produit->nom }}</td>
+                    <td>{{ $produit->nomProd }}</td>
                     <td>{{ $produit->prix }}</td>
                     @if ($produit->categories)
                     <td>	{{ $produit->categories->nomCateg }}</td>
