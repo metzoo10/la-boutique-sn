@@ -7,6 +7,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use Termwind\Components\Dd;
 
 class ProductController extends Controller
 {
@@ -24,20 +25,37 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+       $request->validate([
             'nom' => 'required|string|max:255',
             'prix' => 'required|numeric',
+            'stock'=> 'required|string|max:255',
+            'descript'=> 'required|string|max:255',
+            'info'=> 'required|string|max:255',
             'categorie_id' => 'required|exists:categories,id',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $data = $request->all();
+        $fileName = time().$request->file('image')->getClientOriginalName();
+        $path = $request->file('image')->storeAs('images',$fileName,'public');
+        $data['image'] = '/storage/'.$path;
 
-        if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('produits', 'public');
-        }
+   
+        
 
-        Produit::create($data);
+        // $imageName = time().'.'.$request->image->extension();
+        // $request->image->move(public_path('produits'), $imageName);
+
+        Produit::create([
+            'nomProd' => $request->nom,
+            'prix' => $request->prix,
+            'stock' => $request->stock,
+            'description' => $request->descript,
+            'info' => $request->info,
+            'image' => $data['image'],
+            'category_id' => $request->categorie_id,
+           
+        ]);
 
         return redirect()->route('admin.produits.index')->with('success', 'Produit créé avec succès');
     
@@ -77,7 +95,9 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $produit = Produit::findOrFail($id);
+        $produit->categories;
         $produit->delete();
+        
 
         return redirect()->route('admin.produits.index')->with('success', 'Produit supprimé avec succès');
     }

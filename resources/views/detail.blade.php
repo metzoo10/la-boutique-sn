@@ -24,7 +24,7 @@
 		<div class="row g-5">
 			{{-- Colonne image produit --}}
 			<div class="col-md-4">
-				<img src="/{{ $produit->image }}" alt="{{ $produit->nom }}" class="img-fluid">
+				<img src="{{asset($produit->image) }}" alt="{{ $produit->nom }}" class="img-fluid">
 			</div>
 			{{-- Colonne nom, prix, stock, quantité, boutons ajout panier et ajout wishlist --}}
 			<div class="col-md-4">

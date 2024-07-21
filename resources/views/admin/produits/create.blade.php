@@ -9,6 +9,7 @@
         <h2 class="mb-4">Ajouter un Produit</h2>
         <form action="{{ route('admin.produits.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
+           
             <div class="mb-3">
                 <label for="nom" class="form-label">Nom du Produit</label>
                 <input type="text" class="form-control @error('nom') is-invalid @enderror" id="nom" name="nom" value="{{ old('nom') }}" required>
@@ -23,6 +24,29 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
+            <div class="mb-3">
+                <label for="stock" class="form-label">Stock</label>
+                <input type="text"  class="form-control @error('stock') is-invalid @enderror" id="stock" name="stock" value="{{ old('stock') }}" required>
+                @error('stock')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="mb-3">
+               
+                  <label for="descript" class="form-label">Description</label>
+                <input type="text"  class="form-control @error('descript') is-invalid @enderror" id="descript" name="descript" value="{{ old('descript') }}" required>
+                @error('descript')
+                   <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="mb-3">
+              
+                   <label for="info" class="form-label">Info</label>
+                 <input type="text"  class="form-control @error('info') is-invalid @enderror" id="info" name="info" value="{{ old('info') }}" required>
+                 @error('info')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                 @enderror
+             </div>
             <div class="mb-3">
                 <label for="categorie_id" class="form-label">Catégorie</label>
                 <select class="form-select @error('categorie_id') is-invalid @enderror" id="categorie_id" name="categorie_id" required>
