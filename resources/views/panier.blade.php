@@ -66,7 +66,7 @@
 			
 		</table>
 		<a class="btn btn-primary mt-3" href="{{ route('boutique.index') }}">Continuer vos achats</a>
-		<a class="btn btn-outline-success mt-3 " href="/checkout">Commander</a>
+		<a class="btn btn-outline-success mt-3 " href="{{route('checkout')}}">Commander</a>
 		{{-- Condition else si le panier ne contient pas de produit --}}
 		@else
 			<div class="d-flex justify-content-center align-items-center mb-3" style="height: 80px;">

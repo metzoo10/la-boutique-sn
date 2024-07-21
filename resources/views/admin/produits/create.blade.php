@@ -34,7 +34,8 @@
             <div class="mb-3">
                
                   <label for="descript" class="form-label">Description</label>
-                <input type="text"  class="form-control @error('descript') is-invalid @enderror" id="descript" name="descript" value="{{ old('descript') }}" required>
+                  <textarea  cols="15" rows="5" class="form-control @error('descript') is-invalid @enderror" id="descript" name="descript" value="{{ old('info') }}" required></textarea>
+                {{-- <input type="text"  class="form-control @error('descript') is-invalid @enderror" id="descript" name="descript" value="{{ old('descript') }}" required> --}}
                 @error('descript')
                    <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -42,7 +43,8 @@
             <div class="mb-3">
               
                    <label for="info" class="form-label">Info</label>
-                 <input type="text"  class="form-control @error('info') is-invalid @enderror" id="info" name="info" value="{{ old('info') }}" required>
+                   <textarea  cols="15" rows="5" class="form-control @error('info') is-invalid @enderror" id="info" name="info" value="{{ old('info') }}" required></textarea>
+                 {{-- <input type="text"  class="form-control @error('info') is-invalid @enderror" id="info" name="info" value="{{ old('info') }}" required> --}}
                  @error('info')
                     <div class="invalid-feedback">{{ $message }}</div>
                  @enderror

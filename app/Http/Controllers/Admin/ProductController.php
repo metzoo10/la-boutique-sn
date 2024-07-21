@@ -14,7 +14,7 @@ class ProductController extends Controller
     public function index()
 {
     // Récupère tous les produits avec leurs catégories associées
-    $produits = Produit::with('categories')->get();
+    $produits = Produit::with('categories')->paginate();
 
     // Retourne la vue pour afficher la liste des produits avec les données des produits
     return view('admin.produits.index', compact('produits'));

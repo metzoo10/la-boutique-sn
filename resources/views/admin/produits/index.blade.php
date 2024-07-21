@@ -5,17 +5,17 @@
 @section('title', 'Produits')
 
 @section('content')
-    <h2>Produits</h2>
-    <a href="{{ route('admin.produits.create') }}" class="btn btn-primary mb-3">Ajouter un Produit</a> 
+    <h2 class="py-3 text-center">Listes des Produits</h2>
+    <a href="{{ route('admin.produits.create') }}" class="btn btn-primary mb-4  ">Ajouter un Produit</a> 
     @if (session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
         </div>
     @endif
-    <table class="table">
+    <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>#</th>
                 <th>Nom</th>
                 <th>Prix</th>
                 <th>Catégorie</th>
@@ -27,7 +27,7 @@
         <tbody>
             @foreach ($produits as $produit)
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $produit->id}}</td>
                     <td>{{ $produit->nomProd }}</td>
                     <td>{{ $produit->prix }}</td>
                     @if ($produit->categories)
@@ -47,6 +47,10 @@
                     </td>
                 </tr>
             @endforeach
+            
         </tbody>
+        
     </table>
+    <div class="text-center">{{$produits->links()}}</div>
+    
 @endsection

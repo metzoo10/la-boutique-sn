@@ -25,13 +25,13 @@
         </nav>
     </header>
 
-    <main>
+    <main style="z-index: 100">
         @yield('content')
     </main>
 
-    <footer>
+    {{-- <footer>
         <p>&copy; 2024 Votre La-Boutique-sn</p>
-    </footer>
+    </footer> --}}
 
     <script src="{{ asset('js/admin.js') }}"></script>
 </body>

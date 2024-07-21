@@ -13,11 +13,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UtilisateurController;
 use App\Http\Controllers\Admin\CommandeController;
 use App\Http\Controllers\Admin\ProductController;
-
-
-
-
-
+use App\Http\Controllers\ClientCommandeController;
 
 // Routage de la page d'accueil
 Route::get('/accueil', [ProduitController::class, 'featured'])->name('accueil');
@@ -40,9 +36,7 @@ Route::get('/about', function () {
 });
 
 // Routage de la page de commande
-Route::get('/checkout', function () {
-    return view('checkout');
-});
+Route::get('/checkout', [ClientCommandeController::class, 'index'])->name('checkout');
 
 // Routage de la page de contact
 Route::get('/contact', function () {
