@@ -3,10 +3,17 @@
 @section('content')
 	<!-- Page de connexion -->
 
+	@if(session('register_success'))
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+			{{ session('register_success') }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	@endif
+
 	<div class="container mt-5">
 		<nav aria-label="breadcrumb">
 	  		<ol class="breadcrumb">
-	    		<li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="/">Accueil</a></li>
+	    		<li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="{{route('accueil')}}">Accueil</a></li>
 	    		<li class="breadcrumb-item active text-uppercase" aria-current="page">Se connecter</li>
 	  		</ol>
 		</nav>

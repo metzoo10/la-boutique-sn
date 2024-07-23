@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('commande_produit', function (Blueprint $table) {
+        Schema::create('commande_produits', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('commande_id');
             $table->unsignedBigInteger('produit_id');
+            $table->integer('quantity');
+            $table->integer('prix');
             $table->timestamps();
 
             $table->foreign('commande_id')->references('id')->on('commandes')->onDelete('cascade');

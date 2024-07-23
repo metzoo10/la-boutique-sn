@@ -26,6 +26,7 @@ class CartController extends Controller
                 "description" => $produit->description,
                 "info" => $produit->info,
                 "image" => $produit->image,
+                "produit_id" =>$produit->id
                 
             ];
         }

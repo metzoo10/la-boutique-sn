@@ -68,7 +68,7 @@ class AuthController extends Controller
             
         ]);
 // REDIRECTION VERS LA PAGE de connexion
-         return redirect()->intended(route('auth.Formlogin'));
+         return redirect()->intended(route('auth.Formlogin'))->with('register_success','Votre inscription est réussie');;
 
         
     }
@@ -81,7 +81,7 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/')->with('alert_deconn','Vous vous etes deconnecter');
     }
 
     public function Moncompte()
