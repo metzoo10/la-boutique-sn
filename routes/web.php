@@ -37,6 +37,7 @@ Route::get('/about', function () {
 
 // Routage de la page de commande
 Route::get('/checkout', [ClientCommandeController::class, 'index'])->name('checkout');
+Route::post('/checkout-validation', [ClientCommandeController::class, 'store'])->name('checkoutValid');
 
 // Routage de la page de contact
 Route::get('/contact', function () {
