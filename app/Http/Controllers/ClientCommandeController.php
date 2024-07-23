@@ -20,16 +20,7 @@ class ClientCommandeController extends Controller
     public function store(Request $request)
     {
        
-        // je vais continuer mais si tu es dispo alors fait le !!! mdr....
-
-
-
-
-
-
-
-
-
+        
 
         // Récupérer le panier de la session
         $cart = session('cart', []);
@@ -49,7 +40,7 @@ class ClientCommandeController extends Controller
         $order = Commande::create([
             'user_id' => Auth::id(),
             'montant_total' => $total,
-            'status' => 'accepter',
+            'status' => 'En attente',
         ]);
 
 
