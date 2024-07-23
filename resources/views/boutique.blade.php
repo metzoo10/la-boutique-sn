@@ -57,22 +57,15 @@
 		<div class="row">
 			{{-- Boucle foreach pour afficher tous les produits avec leur nom, image, prix et catégorie --}}
 			@foreach ($produits as $produit)
-			<div class="col-md-3 mb-3">
-				<div class="card" style="width: 18rem;">
-					<a href="{{route('detail',$produit->id)}}"><img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>	
+				<div class="col-md-3 mb-3">
+					<div class="card" style="width: 18 rem;">
+						<a href="{{route('detail',$produit->id)}}"><img src="{{asset($produit->image) }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>
 						<div class="card-body">
 							{{-- Lien qui amène vers la page de détail du produit avec son id comme paramètre --}}
 							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">
 								<h5 class="card-title">{{ $produit->nomProd }}</h5>
 							</a>
 							<p class="card-text fw-medium text-info">{{ $produit->prix }} FCFA</p>
-
-							<p class="card-text fs-6 text-muted">@if ($produit->categories)
-								{{ $produit->categories->nomCateg }} - 
-							@else
-								<em>Sans catégorie</em> - 
-							@endif
-						</p>
 						</div>
 						<div class="card-footer">
 							<div class="d-grid gap-2">

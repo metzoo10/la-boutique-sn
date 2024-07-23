@@ -9,6 +9,12 @@
 			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		</div>
 	@endif
+	@if(session('alert_deconn'))
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+			{{ session('alert_deconn') }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	@endif
 
 	<div class="container-fluid mt-5 mb-5">
 
