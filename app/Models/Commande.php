@@ -8,12 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Commande extends Model
 {
     use HasFactory;
-    protected $fillable = ['numero_commande', 'montant_total', 'utilisateur_id'];
+    protected $fillable = ['user_id','montant_total', 'status'];
 
 
     public function products()
     {
         return $this->belongsToMany(Produit::class);
+    }
+
+    public function items()
+    {
+        return $this->hasMany(CommandeProduit::class);
     }
 
     public function users()
