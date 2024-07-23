@@ -40,10 +40,10 @@ public function create()
         'nom' => 'required|string|max:255', // Le nom du produit est requis, doit être une chaîne de caractères et avoir une longueur maximale de 255 caractères
         'prix' => 'required|numeric', // Le prix du produit est requis et doit être un nombre
         'stock' => 'required|string|max:255', // Le stock du produit est requis, doit être une chaîne de caractères et avoir une longueur maximale de 255 caractères
-        'descript' => 'required|string|max:255', // La description du produit est requise, doit être une chaîne de caractères et avoir une longueur maximale de 255 caractères
-        'info' => 'required|string|max:255', // Les informations du produit sont requises, doivent être une chaîne de caractères et avoir une longueur maximale de 255 caractères
+        'descript' => 'required|string|max:1000', // La description du produit est requise, doit être une chaîne de caractères et avoir une longueur maximale de 255 caractères
+        'info' => 'required|string|max:1000', // Les informations du produit sont requises, doivent être une chaîne de caractères et avoir une longueur maximale de 255 caractères
         'categorie_id' => 'required|exists:categories,id', // La catégorie est requise et doit exister dans la table des catégories
-        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // L'image est optionnelle mais si présente, doit être un fichier image de type jpeg, png, jpg ou gif, et ne doit pas dépasser 2 Mo
+        'image' => 'require|image|mimes:jpeg,png,jpg,gif|max:2048', // L'image est optionnelle mais si présente, doit être un fichier image de type jpeg, png, jpg ou gif, et ne doit pas dépasser 2 Mo
     ]);
 
     // Récupère toutes les données validées de la requête
