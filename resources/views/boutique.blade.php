@@ -17,7 +17,7 @@
 		</div>
 	@endif
 
-	<div class="container mt-5">
+	<div class="container-fluid mt-5">
 		<nav aria-label="breadcrumb">
 	  		<ol class="breadcrumb">
 	    		<li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="/">Accueil</a></li>
@@ -58,7 +58,7 @@
 			{{-- Boucle foreach pour afficher tous les produits avec leur nom, image, prix et catégorie --}}
 			@foreach ($produits as $produit)
 			<div class="col-md-3 mb-3">
-				<div class="card card_heit">
+				<div class="card" style="width: 18rem;">
 					<a href="{{route('detail',$produit->id)}}"><img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>	
 						<div class="card-body">
 							{{-- Lien qui amène vers la page de détail du produit avec son id comme paramètre --}}
