@@ -70,7 +70,7 @@
 		      <p>Email : <a href="mailto:mouhamed.ba@unchk.edu.sn">mouhamed.ba@unchk.edu.sn</a></p>
 		    </div>
 		    <div class="carousel-item">
-		      <img src="images/membres/2.jpg" class="img-thumbnail" alt="..." width="50%">
+		      <img src="images/membres/2.jpg" class="img-thumbnail" alt="..." width="350px">
 		      <h5 class="mt-3">Mamadou Adiouma Kane</h5>
 		      <p>Étudiant</p>
 		      <p>Email : <a href="mailto:mamadouadiouma.kane@unchk.edu.sn">mamadouadiouma.kane@unchk.edu.sn</a></p>
@@ -100,7 +100,7 @@
 		      <p>Email : <a href="mailto:momarcoumba.kane@unchk.edu.sn">momarcoumba.kane@unchk.edu.sn</a></p>
 		    </div>
 		    <div class="carousel-item">
-		      <img src="images/membres/3.jpg" class="img-thumbnail" alt="..." width="250px">
+		      <img src="images/membres/9.jpg" class="img-thumbnail" alt="..." width="250px">
 		      <h5 class="mt-5">Baye Ahmadou Khary Loum</h5>
 		      <p>Étudiant</p>
 		      <p>Email : <a href="mailto:bayeahmadoukhary.loum@unchk.edu.sn">bayeahmadoukhary.loum@unchk.edu.sn</a></p>
