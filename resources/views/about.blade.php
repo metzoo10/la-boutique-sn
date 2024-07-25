@@ -94,8 +94,125 @@
 		<hr class="mb-5 text-dark">
 
 		{{-- Section présentation de l'équipe (caroussel d'images) --}}
-		
+
 		<div class="h2 text-center mb-5">Membres de l'équipe</div>
+		<div class="row mb-5 p-5">
+			<div class="col-md-4">
+				<div class="card w-75">
+					<img src="images/membres/1.jpg" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Mouhamed BA</h5>
+						<p class="card-text">Étudiant</p>
+					</div>
+					<div class="card-footer">
+						<p>Email :
+							<a class="text-decoration-none" href="mailto:mouhamed.ba@unchk.edu.sn">mouhamed.ba@unchk.edu.sn</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card w-75">
+					<img src="images/membres/8.jpg" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Mor TALL</h5>
+						<p class="card-text">Étudiant</p>
+					</div>
+					<div class="card-footer">
+						<p>Email : <a class="text-decoration-none" href="mailto:mor.tall@unchk.edu.sn">mor.tall@unchk.edu.sn</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card w-75">
+					<img class="img-thumbnail mx-auto" src="images/membres/3.jpg" alt="" width="225px">
+					<div class="card-body">
+						<h5 class="card-title">Mame Diarra MANÉ</h5>
+						<p class="card-text">Étudiante</p>
+					</div>
+					<div class="card-footer">
+						<p>Email : <a class="text-decoration-none" href="mailto:mamediarra.mane@unchk.edu.sn">mamediarra.mane@unchk.edu.sn</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mb-5 p-5">
+			<div class="col-md-4">
+				<div class="card w-75">
+					<img class="img-thumbnail mx-auto" src="images/membres/6.jpg" alt="" width="220px">
+					<div class="card-body">
+						<h5 class="card-title">Mamadou Hassimou Diallo</h5>
+						<p class="card-text">Étudiant</p>
+					</div>
+					<div class="card-footer">
+						<p>Email : <a class="text-decoration-none" href="mailto:mamadouhassimou.diallo@unchk.edu.sn">mamadouhassimou.diallo@unchk.edu.sn</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card w-75">
+					<img class="img-thumbnail mx-auto" src="images/membres/7.jpg" alt="" width="206px">
+					<div class="card-body">
+						<h5 class="card-title">Momar Coumba KANE</h5>
+						<p class="card-text">Étudiant</p>
+					</div>
+					<div class="card-footer">
+						<p>Email : <a class="text-decoration-none" href="mailto:momarcoumba.kane@unchk.edu.sn">momarcoumba.kane@unchk.edu.sn</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card w-75">
+					<img class="" src="images/membres/2.jpg" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Mamadou Adiouma KANE</h5>
+						<p class="card-text">Étudiant</p>
+					</div>
+					<div class="card-footer">
+						<p>Email : <a class="text-decoration-none" href="mailto:mamadouadiouma.kane@unchk.edu.sn">mamadouadiouma.kane@unchk.edu.sn</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mb-5 p-5">
+			<div class="col-md-4">
+				<div class="card w-75">
+					<img class="img-thumbnail mx-auto" src="images/membres/4.jpg" alt="" width="225px">
+					<div class="card-body">
+						<h5 class="card-title">Mame Adama BOUSSO</h5>
+						<p class="card-text">Étudiante</p>
+					</div>
+					<div class="card-footer">
+						<p>Email : <a class="text-decoration-none" href="mailto:mameadama.bousso@unchk.edu.sn">mameadama.bousso@unchk.edu.sn</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card w-75">
+					<img class="" src="images/membres/9.jpg" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Baye Ahmadou Khary LOUM</h5>
+						<p class="card-text">Étudiant</p>
+					</div>
+					<div class="card-footer">
+						<p>Email : <a class="text-decoration-none" href="mailto:bayeahmadoukhary.loum@unchk.edu.sn">bayeahmadoukhary.loum@unchk.edu.sn</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card w-75">
+					<img class="" src="images/membres/5.jpg" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Khadidiatou MBATHIE</h5>
+						<p class="card-text">Étudiante</p>
+					</div>
+					<div class="card-footer">
+						<p>Email : <a class="text-decoration-none" href="mailto:khadidiatou.mbathie@unchk.edu.sn">khadidiatou.mbathie@unchk.edu.sn</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{--
 		
 		<div id="carouselExampleAutoplaying" class="carousel carousel-dark slide mb-5" data-bs-ride="carousel">
 		  <div class="carousel-inner text-center">
@@ -163,7 +280,7 @@
 		    <span class="visually-hidden">Next</span>
 		  </button>
 		</div>
-
+		--}}
 		{{-- Fin section --}}
 		
 	</div>
