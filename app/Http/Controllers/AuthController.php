@@ -68,7 +68,11 @@ class AuthController extends Controller
             
         ]);
 // REDIRECTION VERS LA PAGE de connexion
+<<<<<<< HEAD
          return redirect()->intended(route('auth.Formlogin'))->with('register_success','Votre inscription est réussie!');;
+=======
+         return redirect()->intended(route('auth.Formlogin'))->with('register_success','Votre inscription est réussi'); 
+>>>>>>> e3d42dbd413a85ed60a67a2a77c24428d5364880
 
         
     }
@@ -81,7 +85,11 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
+<<<<<<< HEAD
         return redirect('/')->with('alert_deconn','Vous vous êtes déconnecté avec succès!');
+=======
+        return redirect('/')->with('alert_deconn','Vous vous etes deconnecter');;
+>>>>>>> e3d42dbd413a85ed60a67a2a77c24428d5364880
     }
 
     public function Moncompte()
