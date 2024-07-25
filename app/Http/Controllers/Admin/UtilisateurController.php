@@ -11,7 +11,7 @@ class UtilisateurController extends Controller
         $users = User::all();
         $totalUsers = User::count();
         return view("admin.utilisateurs.index", ['users' => $users, 'totalUsers' => $totalUsers]);
-        return view("admin.utilisateurs.index");
+       
 
     }
 
