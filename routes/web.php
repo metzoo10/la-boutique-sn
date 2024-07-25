@@ -126,6 +126,7 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
 
     // ROUTE POUR UTILISATEURS
     Route::get('/utilisateurs', [UtilisateurController::class, 'index'])->name('admin.utilisateurs.index');
+    Route::get('/utilisateurs/{id}', [UtilisateurController::class, 'destroyUser'])->name('admin.utilisateurs.destroyUser');
 
     });
 
