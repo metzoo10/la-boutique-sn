@@ -81,7 +81,7 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/')->with('alert_deconn','Vous vous etes deconnecter');;
     }
 
     public function Moncompte()
