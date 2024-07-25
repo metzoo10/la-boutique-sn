@@ -53,7 +53,17 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
-            'engine' => null,
+            // 'engine' => null,
+            // Correction de l'erreur
+            /**
+             * SQLSTATE[42000]: Syntax error or access violation: 1071 La clé est trop longue.
+             * Longueur maximale: 1000 
+             * * */
+            // autres configurations
+            'engine' => 'InnoDB ROW_FORMAT=DYNAMIC',
+
+            /**ENGINE */
+
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],

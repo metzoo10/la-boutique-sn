@@ -1,4 +1,7 @@
 /* Barre Info styles */
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 .blue-info-bar {
     background-color: #161B6E;
@@ -44,7 +47,9 @@
     font-size: 14px;
 }
 
-.footer p, .footer ul, .footer li {
+.footer p,
+.footer ul,
+.footer li {
     margin: 0;
     padding: 0;
     color: #666666;
@@ -92,11 +97,13 @@
     font-weight: 700;
     margin-bottom: 15px;
 }
+
 .footer-box .blue-number {
     color: #6de9ef;
     font-size: 20px;
     font-weight: bold;
 }
+
 /* Partie des contacts */
 
 .footer-box .wrap-contact-detail ul {
@@ -104,16 +111,18 @@
     margin: 0;
 }
 
-.footer-box .wrap-contact-detail ul li{
+.footer-box .wrap-contact-detail ul li {
     display: inline-block;
     float: left;
     width: 100%;
     color: #555555;
 }
-.footer-box .wrap-contact-detail ul li:not(:last-child){
+
+.footer-box .wrap-contact-detail ul li:not(:last-child) {
     margin-bottom: 9px;
 }
-.footer-box .wrap-contact-detail ul li i{
+
+.footer-box .wrap-contact-detail ul li i {
     display: inline-block;
     font-size: 16px;
     line-height: 30px;
@@ -121,18 +130,19 @@
     width: 26px;
     float: left;
 }
-.footer-box .wrap-contact-detail ul li .contact-txt{
+
+.footer-box .wrap-contact-detail ul li .contact-txt {
     display: inline-block;
     margin: 0;
     font-size: 13px;
     line-height: 30px;
     text-align: left;
-    max-width: calc( 100% - 26px);
-    max-width: -webkit-calc( 100% - 26px);
-    max-width: -moz-calc( 100% - 26px);
+    max-width: calc(100% - 26px);
+    max-width: -moz-calc(100% - 26px);
     float: left;
     padding-right: 8%
 }
+
 /* Partie logos des réseaux sociaux */
 
 .footer-box.social-network ul {
@@ -148,9 +158,6 @@
     padding: 12px 5px;
     display: inline-block;
     text-align: center;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
@@ -168,6 +175,7 @@
 .footer-box.social-network ul li a:hover {
     background-color: #6DE9EF;
 }
+
 /* Partie des images paiement */
 
 .footer-box.payment-box ul {
@@ -213,47 +221,57 @@
     font-weight: 700;
     margin-bottom: 16px;
 }
-.back-link-box  .back-link-row{
+
+.back-link-box .back-link-row {
     display: block;
     font-size: 0;
 }
-.back-link-box  .list-back-link{
+
+.back-link-box .list-back-link {
     padding: 0;
     margin: 0;
     display: inline-block;
 }
-.back-link-box  .list-back-link li{
+
+.back-link-box .list-back-link li {
     display: inline-block;
     float: left;
 }
-.back-link-box  .list-back-link li span,
-.back-link-box  .list-back-link li a{
+
+.back-link-box .list-back-link li span,
+.back-link-box .list-back-link li a {
     text-transform: capitalize;
 }
-.back-link-box  .list-back-link li .row-title{
+
+.back-link-box .list-back-link li .row-title {
     font-size: 14px;
     line-height: 30px;
     color: #000;
     font-weight: 700;
 }
-.back-link-box  .list-back-link li .redirect-back-link{
+
+.back-link-box .list-back-link li .redirect-back-link {
     font-size: 13px;
     color: #666666;
     line-height: 30px;
     text-decoration: none;
 }
-.back-link-box  .list-back-link li .redirect-back-link:hover {
+
+.back-link-box .list-back-link li .redirect-back-link:hover {
     color: #6DE9EF;
 }
-.back-link-box  .list-back-link li:nth-child(2) .redirect-back-link{
+
+.back-link-box .list-back-link li:nth-child(2) .redirect-back-link {
     padding-left: 5px;
     padding-right: 12px;
 }
-.back-link-box  .list-back-link li:not(:nth-child(2)):not(:nth-child(1)) .redirect-back-link{
+
+.back-link-box .list-back-link li:not(:nth-child(2)):not(:nth-child(1)) .redirect-back-link {
     padding-right: 12px;
-    padding-left: 12px;   
+    padding-left: 12px;
 }
-.back-link-box  .list-back-link li:not(:last-child):not(:nth-child(1)) .redirect-back-link::after{
+
+.back-link-box .list-back-link li:not(:last-child):not(:nth-child(1)) .redirect-back-link::after {
     content: '';
     display: inline-block;
     float: right;
@@ -287,30 +305,37 @@
     padding: 10px;
     font-size: 13px;
 }
+
 .last-footer p {
     margin: 0;
 }
+
 .footer-links {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .footer-links li {
     display: inline;
     margin-left: 20px;
     border-right: 1px solid #555;
 }
+
 .footer-links li:last-child {
     border-right: none;
 }
+
 .footer-links a {
     color: #fff;
     text-decoration: none;
     margin-right: 15px;
 }
+
 .footer-links a:hover {
     color: #6DE9EF;
 }
+
 .text-right {
     text-align: center;
 }

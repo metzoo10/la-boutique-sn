@@ -1,9 +1,7 @@
 <!-- resources/views/admin/produits/index.blade.php -->
 
 @extends('admin.layout')
-
 @section('title', 'Produits')
-
 @section('content')
     <h2>Produits</h2>
     <a href="{{ route('admin.produits.create') }}" class="btn btn-primary mb-3">Ajouter un Produit</a> 
@@ -26,7 +24,7 @@
             @foreach ($produits as $produit)
                 <tr>
                     <td>{{ $produit->id }}</td>
-                    <td>{{ $produit->nom }}</td>
+                    <td>{{ $produit->nomProd }}</td>
                     <td>{{ $produit->prix }}</td>
                     <td>{{ $produit->categories->nomCateg }}</td>
                     <td><img src="{{ $produit->image}}" alt=""style="heith:50px;width:50px" ></td>

@@ -130,7 +130,10 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
     Route::post('/store', [ProductController::class,'store'])->name('admin.produits.store');
     Route::get('/edit/{produit}', [ProductController::class,'edit'])->name('admin.produits.edit');
     Route::delete('/destroy/{produit}', [ProductController::class,'destroy'])->name('admin.produits.destroy');
+    Route::delete('/destroy/{category}', [CategorieController::class, 'destroy'])->name('admin.categories.destroy');
+    Route::delete('/destroyUser/{user}', [UtilisateurController::class,'destroyUser'])->name('admin.utilisateurs.destroyUser');
     Route::put('/update/{produit}', [ProductController::class,'update'])->name('admin.produits.update');
 
-    Route::get('/commandes', [CommandeController::class])->name('admin.commandes.index');
-    Route::get('/utilisateurs', [UtilisateurController::class])->name('admin.utilisateurs.index');
+    Route::get('/commandes', [CommandeController::class, 'index'])->name('admin.commandes.index');
+    Route::get('/utilisateurs', [UtilisateurController::class, 'index'])->name('admin.utilisateurs.index');
+

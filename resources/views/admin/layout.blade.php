@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h1>Administration</h1>
+        <h1 class="text-uppercase">Administration</h1>
         <nav>
             <ul>
                 <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
