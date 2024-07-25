@@ -47,11 +47,11 @@
 		<div class="row">
 			{{-- Boucle foreach pour afficher chaque produit de catégorie "Beauté" --}}
 			@foreach ($produits as $produit)
-			
-			<div class="col-md-3 mb-3">
-				<div class="card" style="width: 18rem;">
-					<a href="{{route('detail',$produit->id)}}"><img src="/{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>	
+				<div class="col-md-3 mb-3">
+					<div class="card" style="width: 18 rem;">
+						<a href="{{route('detail',$produit->id)}}"><img src="{{asset($produit->image) }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>
 						<div class="card-body">
+							{{-- Lien qui amène vers la page de détail du produit avec son id comme paramètre --}}
 							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">
 								<h5 class="card-title">{{ $produit->nomProd }}</h5>
 							</a>
