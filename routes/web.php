@@ -36,8 +36,8 @@ Route::get('/about', function () {
 });
 
 // Routage de la page de commande
-Route::get('/checkout', [ClientCommandeController::class, 'index'])->name('checkout');
-Route::post('/checkout-validation', [ClientCommandeController::class, 'store'])->name('checkoutValid');
+Route::get('/checkout', [ClientCommandeController::class, 'index'])->name('checkout')->middleware('auth');
+Route::post('/checkout-validation', [ClientCommandeController::class, 'store'])->name('checkoutValid')->middleware('auth');
 
 // Routage de la page de contact
 Route::get('/contact', function () {
