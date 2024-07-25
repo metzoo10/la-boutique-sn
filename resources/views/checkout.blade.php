@@ -15,6 +15,34 @@
 	@auth
 <!--Force ma commit nakk -->
 	<div class="container mt-5 mb-5">
+
+		@if(count($cartItems) > 0)
+		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Résumé de la commande</div>
+		<table class="mt-2 mb-4">
+			<thead>
+				<tr>
+					<th>Produit</th>
+					<th>Nom</th>
+					<th>Quantité</th>
+					<th>Prix</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{-- Boucle foreach pour afficher tout produit contenu sur le panier --}}
+				@foreach($cartItems as $id => $details)
+				<tr>
+					<td><img src="{{ $details['image'] }}" alt="{{ $details['nom'] }}" width="50" height="50"></td>
+					<td>{{ $details['nom'] }}</td>
+					<td>{{ $details['quantity'] }}</td>
+					<td>{{ $details['prix'] }} FCFA</td>
+					<td>{{ $details['prix'] * $details['quantity'] }} FCFA</td>
+				</tr>
+				@endforeach
+			</tbody>
+		</table>
+		@endif
+
 		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Adresse de facturation</div>
 		<form class="row g-3" method="post" action="{{route('checkoutValid')}}">
 			@method('POST')
@@ -59,8 +87,6 @@
 				  </label>
 				  <img class="rounded" src="/images/brands/visa.png" alt="Logo Visa" title="Visa" height="30px">
 				</div>
-				{{-- CALCULER LE PRIX TOTAL A FAIRE  --}}
-				<h6 class="mt-3">Total : <b>5000</b> FCFA</h6>
 			</div>
 			<div class="col-md-6 p-4">
 				<div class="h6 mt-2 mb-4 text-muted border-bottom border-secondary">Méthode de livraison</div>

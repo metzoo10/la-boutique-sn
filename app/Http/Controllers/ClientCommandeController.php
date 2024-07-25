@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Session;
 class ClientCommandeController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
-         return view('checkout');
+        $cartItems = Session::get('cart', []);
+
+        return view('checkout', compact('cartItems'));
     }
 
 
