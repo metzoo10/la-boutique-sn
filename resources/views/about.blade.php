@@ -3,7 +3,7 @@
 @section('content')
 	<!-- Page d'à propos -->
 
-	<div class="container mt-5">
+	<div class="container-fluid mt-5">
 		<nav aria-label="breadcrumb">
 	  		<ol class="breadcrumb">
 	    		<li class="breadcrumb-item"><a class="text-info text-uppercase text-decoration-none" href="/">Accueil</a></li>
@@ -12,7 +12,7 @@
 		</nav>
 	</div>
 
-	<div class="container mt-5">
+	<div class="container-fluid mt-5">
 		<div class="row">
 			<h4 class="mb-3">À Propos de La Boutique.SN</h4>
 			<p>Bienvenue chez La Boutique.SN, votre destination en ligne pour découvrir une large gamme de produits de qualité dans les domaines de l'électronique, de la mode, du mobilier, de la beauté, du bricolage et des jouets. Depuis notre fondation en 2024, nous nous engageons à offrir à nos clients une expérience d'achat exceptionnelle, soutenue par notre passion pour la qualité et notre dévouement envers le service client.</p>
@@ -57,11 +57,47 @@
 			</div>
 		</div>
 
+		{{-- Section Tabs pour caractéristiques du site --}}
+
+		<div class="row mt-5 mb-5">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="assistance-tab" data-bs-toggle="tab" data-bs-target="#assistance-tab-pane" type="button" role="tab" aria-controls="assistance-tab-pane" aria-selected="true">Assistance 24H/24 et 7j/7</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="qualite-tab" data-bs-toggle="tab" data-bs-target="#qualite-tab-pane" type="button" role="tab" aria-controls="qualite-tab-pane" aria-selected="false">Meilleure qualité</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="livraison-tab" data-bs-toggle="tab" data-bs-target="#livraison-tab-pane" type="button" role="tab" aria-controls="livraison-tab-pane" aria-selected="false">Livraison rapide</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="service-tab" data-bs-toggle="tab" data-bs-target="#service-tab-pane" type="button" role="tab" aria-controls="service-tab-pane" aria-selected="false">Service clientèle</button>
+				</li>
+			</ul>
+			<div class="tab-content mt-4" id="myTabContent">
+				<div class="tab-pane fade show active" id="assistance-tab-pane" role="tabpanel" aria-labelledby="assistance-tab" tabindex="0">
+					<p>Notre équipe dévouée est disponible à tout moment, jour et nuit, pour répondre à vos questions, résoudre vos problèmes et assurer une expérience d'achat fluide et sans souci, quel que soit le moment où vous avez besoin de nous.</p>
+				</div>
+				<div class="tab-pane fade" id="qualite-tab-pane" role="tabpanel" aria-labelledby="qualite-tab" tabindex="0">
+					<p>Chez La Boutique.SN, nous nous engageons à sélectionner uniquement les produits de la plus haute qualité. Chaque article est soigneusement évalué pour répondre à nos normes rigoureuses, garantissant ainsi une satisfaction totale à nos clients.</p>
+				</div>
+				<div class="tab-pane fade" id="livraison-tab-pane" role="tabpanel" aria-labelledby="livraison-tab" tabindex="0">
+					<p>Nous comprenons l'importance de recevoir vos achats rapidement. Grâce à notre réseau logistique efficace, nous nous efforçons de vous offrir la livraison la plus rapide possible, afin que vous puissiez profiter de vos produits sans attendre.</p>
+				</div>
+				<div class="tab-pane fade" id="service-tab-pane" role="tabpanel" aria-labelledby="service-tab" tabindex="0">
+					<p>Notre équipe de service clientèle est passionnée par votre satisfaction. Nous sommes là pour vous fournir un support personnalisé, des réponses rapides à vos questions et des solutions adaptées à vos besoins, assurant ainsi une expérience client exceptionnelle à chaque interaction.</p>
+				</div>
+			</div>
+		</div>
+		{{-- Fin section Tabs --}}
+
+		<hr class="mb-5 text-dark">
+
 		{{-- Section présentation de l'équipe (caroussel d'images) --}}
 		
 		<div class="h2 text-center mb-5">Membres de l'équipe</div>
 		
-		<div id="carouselExampleAutoplaying" class="carousel carousel-dark slide" data-bs-ride="carousel">
+		<div id="carouselExampleAutoplaying" class="carousel carousel-dark slide mb-5" data-bs-ride="carousel">
 		  <div class="carousel-inner text-center">
 		    <div class="carousel-item active">
 		      <img src="images/membres/1.jpg" class="img-thumbnail" alt="..." width="250px">
@@ -129,39 +165,6 @@
 		</div>
 
 		{{-- Fin section --}}
-
-		{{-- Section Tabs pour caractéristiques du site --}}
-
-		<div class="row mt-5 mb-5">
-			<ul class="nav nav-tabs" id="myTab" role="tablist">
-				<li class="nav-item" role="presentation">
-					<button class="nav-link active" id="assistance-tab" data-bs-toggle="tab" data-bs-target="#assistance-tab-pane" type="button" role="tab" aria-controls="assistance-tab-pane" aria-selected="true">Assistance 24H/24 et 7j/7</button>
-				</li>
-				<li class="nav-item" role="presentation">
-					<button class="nav-link" id="qualite-tab" data-bs-toggle="tab" data-bs-target="#qualite-tab-pane" type="button" role="tab" aria-controls="qualite-tab-pane" aria-selected="false">Meilleure qualité</button>
-				</li>
-				<li class="nav-item" role="presentation">
-					<button class="nav-link" id="livraison-tab" data-bs-toggle="tab" data-bs-target="#livraison-tab-pane" type="button" role="tab" aria-controls="livraison-tab-pane" aria-selected="false">Livraison rapide</button>
-				</li>
-				<li class="nav-item" role="presentation">
-					<button class="nav-link" id="service-tab" data-bs-toggle="tab" data-bs-target="#service-tab-pane" type="button" role="tab" aria-controls="service-tab-pane" aria-selected="false">Service clientèle</button>
-				</li>
-			</ul>
-			<div class="tab-content mt-4" id="myTabContent">
-				<div class="tab-pane fade show active" id="assistance-tab-pane" role="tabpanel" aria-labelledby="assistance-tab" tabindex="0">
-					<p>Notre équipe dévouée est disponible à tout moment, jour et nuit, pour répondre à vos questions, résoudre vos problèmes et assurer une expérience d'achat fluide et sans souci, quel que soit le moment où vous avez besoin de nous.</p>
-				</div>
-				<div class="tab-pane fade" id="qualite-tab-pane" role="tabpanel" aria-labelledby="qualite-tab" tabindex="0">
-					<p>Chez La Boutique.SN, nous nous engageons à sélectionner uniquement les produits de la plus haute qualité. Chaque article est soigneusement évalué pour répondre à nos normes rigoureuses, garantissant ainsi une satisfaction totale à nos clients.</p>
-				</div>
-				<div class="tab-pane fade" id="livraison-tab-pane" role="tabpanel" aria-labelledby="livraison-tab" tabindex="0">
-					<p>Nous comprenons l'importance de recevoir vos achats rapidement. Grâce à notre réseau logistique efficace, nous nous efforçons de vous offrir la livraison la plus rapide possible, afin que vous puissiez profiter de vos produits sans attendre.</p>
-				</div>
-				<div class="tab-pane fade" id="service-tab-pane" role="tabpanel" aria-labelledby="service-tab" tabindex="0">
-					<p>Notre équipe de service clientèle est passionnée par votre satisfaction. Nous sommes là pour vous fournir un support personnalisé, des réponses rapides à vos questions et des solutions adaptées à vos besoins, assurant ainsi une expérience client exceptionnelle à chaque interaction.</p>
-				</div>
-			</div>
-		</div>
 		
 	</div>
 @endsection

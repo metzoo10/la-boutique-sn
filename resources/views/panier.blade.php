@@ -21,7 +21,8 @@
 	</div>
 
 	<div class="container cart-container mb-4 mt-5">
-		<h3>Votre Panier</h3>
+		<h3>Votre panier</h3>
+		@auth
 		{{-- Condition si le panier n'est pas vide, afficher le contenu --}}
 		@if(count($cart) > 0)
 		<table class="mt-2">
@@ -69,6 +70,7 @@
 		<a class="btn btn-outline-success mt-3 " href="{{route('checkout')}}">Commander</a>
 		{{-- Condition else si le panier ne contient pas de produit --}}
 		@else
+
 			<div class="d-flex justify-content-center align-items-center mb-3" style="height: 80px;">
 				<div class="bg-white text-white d-flex justify-content-center align-items-center rounded-circle" style="width: 80px; height: 80px;">
 					<i class="fa-solid fa-cart-shopping fs-2 text-info"></i>
@@ -81,5 +83,19 @@
 			</div>
 		@endif
 		
+		@endauth
+
+		@guest
+			<div class="d-flex justify-content-center align-items-center mb-3" style="height: 80px;">
+				<div class="bg-white text-white d-flex justify-content-center align-items-center rounded-circle" style="width: 80px; height: 80px;">
+					<i class="fa-solid fa-circle-exclamation fs-2 text-info"></i>
+				</div>
+			</div>
+			<p class="text-center fw-bold mt-2">Vous n'êtes pas connecté(e) !</p>
+			<p class="text-center">Connectez-vous et parcourez notre boutique et catégories pour découvrir nos meilleures offres et produits !</p>
+			<div class="d-grid gap-2 col-6 mx-auto mt-5 mb-4">
+				<a href="/login" class="btn btn-info">Connectez-vous</a>
+			</div>
+		@endguest
 	</div>
 @endsection

@@ -88,7 +88,7 @@
 	@endauth
 	@guest
 	<div class="alert alert-warning text-center alert-dismissible fade show" role="alert">
-		<h1>devez-vous connecter pour effectuer votre commande !!</h1>
+		<h1>Vous devez vous connecter pour effectuer votre commande !</h1>
 		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 	</div>
 	@endguest
