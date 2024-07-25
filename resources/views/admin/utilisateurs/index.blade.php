@@ -47,9 +47,9 @@
                     <td>{{ $user->adresse }}</td>
                     <td>{{ $user->telephone }}</td>
                     <td>
-                         <form action="{{ route('admin.utilisateurs.destroyUser', $user->id) }}" method="POST" style="display:inline;">
+                         <form action="{{ route('admin.utilisateurs.destroyUser', $user->id) }}" method="get" style="display:inline;">
                             @csrf
-                            @method('DELETE')
+                          
                             <button type="submit" class="btn btn-danger">Supprimer</button>
                         </form>
                     </td>
