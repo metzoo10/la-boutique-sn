@@ -103,11 +103,9 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
 
 
 // ADMIN
-// ROUTE POUR ADMIN
-
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-
-// ROUTE CATEGORY
+    Route::middleware(['auth'])->prefix('admin')->group(function () {
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+        // ROUTE CATEGORY
     Route::get('/categories', [CategorieController::class, 'index'])->name('admin.categories.index');
     Route::get('/createCateg', [CategorieController::class, 'create']);
     Route::get('/editCateg/{category}', [CategorieController::class, 'edit'])->name('admin.categories.edit');
@@ -115,12 +113,7 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
     Route::put('/updateCateg/{category}', [CategorieController::class, 'update'])->name('admin.categories.update');
     Route::delete('/destroyCateg/{category}', [CategorieController::class, 'destroy'])->name('admin.categories.destroy');
 
-
-
-
-
-
-// ROUTE PRODUIT
+    // ROUTE PRODUIT
     Route::get('/produits', [ProductController::class,'index'])->name('admin.produits.index');
     Route::get('/createProd', [ProductController::class,'create'])->name('admin.produits.create');
     Route::post('/storeProd', [ProductController::class,'store'])->name('admin.produits.store');
@@ -128,7 +121,14 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
     Route::delete('/destroyProd/{produit}', [ProductController::class,'destroy'])->name('admin.produits.destroy');
     Route::put('/updateProd/{produit}', [ProductController::class,'update'])->name('admin.produits.update');
 
-
+    // ROUTE POUR COMMANDES
     Route::get('/commandes', [CommandeController::class, 'index'])->name('admin.commandes.index');
+
+    // ROUTE POUR UTILISATEURS
     Route::get('/utilisateurs', [UtilisateurController::class, 'index'])->name('admin.utilisateurs.index');
+
+    });
+
+
+
 
