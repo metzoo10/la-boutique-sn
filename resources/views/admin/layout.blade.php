@@ -13,7 +13,7 @@
 <body>
     <header>
         <h1 class="text-uppercase">Administration</h1>
-        <nav>
+        <nav class="text-center">
             <ul>
                 <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
                  <li><a href="{{ route('admin.categories.index') }}">Catégories</a></li>
@@ -28,10 +28,10 @@
     <main style="z-index: 100">
         @yield('content')
     </main>
-
-    {{-- <footer>
+{{-- 
+     <footer>
         <p>&copy; 2024 Votre La-Boutique-sn</p>
-    </footer> --}}
+    </footer>  --}}
 
     <script src="{{ asset('js/admin.js') }}"></script>
 </body>
