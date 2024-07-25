@@ -28,7 +28,7 @@
     <div class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav">
             <li class="nav-item wishlist">
-                <a class="nav-link" href="/wishlist"><i class="fa fa-heart"></i> Liste de souhaits 
+                <a class="nav-link" href="/wishlist"><i class="fa fa-heart"></i> Liste d'envies 
                     @if ($wishlistItemCount > 0)
                     <span class="badge badge-secondary">{{ $wishlistItemCount }}
                     </span>
@@ -55,8 +55,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="/"><i class="fa-solid fa-house"></i></a>
             </li>
-           
-            
             <li class="nav-item">
                 <a class="nav-link" href="/boutique">Boutique</a>
             </li>

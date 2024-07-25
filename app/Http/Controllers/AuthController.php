@@ -31,7 +31,7 @@ class AuthController extends Controller
     //    SI OUI ON CREE UNE SESSION
         $request->session()->regenerate();
 // REDIRECTION VERS LA PAGE DEMANDER OUBIEN LA DIREGER VERS BOUTIQUE
-        return redirect()->intended(route('boutique.index'))->with('connexion_success',' ,Vous etes connecter avec success');
+        return redirect()->intended(route('boutique.index'))->with('connexion_success',' ,Vous êtes connecté avec succès!');
 
      } 
     //  SINON REDIRECTION SUR LA PAGE  
@@ -68,7 +68,7 @@ class AuthController extends Controller
             
         ]);
 // REDIRECTION VERS LA PAGE de connexion
-         return redirect()->intended(route('auth.Formlogin'))->with('register_success','Votre inscription est réussie');;
+         return redirect()->intended(route('auth.Formlogin'))->with('register_success','Votre inscription est réussie!');;
 
         
     }
@@ -81,7 +81,7 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/')->with('alert_deconn','Vous vous etes deconnecter');
+        return redirect('/')->with('alert_deconn','Vous vous êtes déconnecté avec succès!');
     }
 
     public function Moncompte()

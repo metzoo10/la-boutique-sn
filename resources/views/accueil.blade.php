@@ -122,66 +122,66 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 mb-4">
-				<div class="card h-75">
-					<img src="/images/categorie/6.png" alt="Image de produits électroniques.">
-					<div class="card-body">
-						<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 1) }}">
+				<div class="card" style="width: 22rem;">
+					<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 1) }}">
+						<img class="mx-auto" src="/images/categorie/6.png" alt="Image de produits électroniques." width="350px">
+						<div class="card-body">
 							<h6 class="card-title text-center">Électroniques</h6>
-						</a>
-					</div>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div class="col-md-4 mb-4">
-				<div class="card h-75">
-					<img src="/images/categorie/2.png" alt="Image de quatre modèles hommes portant des vêtements colorés.">
-					<div class="card-body">
-						<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 2) }}">
+				<div class="card" style="width: 22rem">
+					<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 2) }}">
+						<img class="mx-auto" src="/images/categorie/2.png" alt="Image de quatre modèles hommes portant des vêtements colorés." width="350px">
+						<div class="card-body">
 							<h6 class="card-title text-center">Mode</h6>
-						</a>
-					</div>
+						</div>
+					</a>	
 				</div>
 			</div>
 			<div class="col-md-4 mb-4">
-				<div class="card h-75">
-					<img src="/images/categorie/1.png" alt="Image d'un canapé gris avec coussins.">
-					<div class="card-body">
-						<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 3) }}">
+				<div class="card" style="width: 22rem">
+					<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 3) }}">
+						<img class="mx-auto" src="/images/categorie/1.png" alt="Image d'un canapé gris avec coussins." width="350px">
+						<div class="card-body">
 							<h6 class="card-title text-center">Meubles</h6>
-						</a>
-					</div>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-4 mb-4">
-				<div class="card h-75">
-					<img src="/images/categorie/4.png" alt="Image d'un bébé qui joue.">
-					<div class="card-body">
-						<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 4) }}">
+				<div class="card" style="width: 22rem">
+					<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 4) }}">
+						<img class="mx-auto" src="/images/categorie/4.png" alt="Image d'un bébé qui joue." width="350px">
+						<div class="card-body">
 							<h6 class="card-title text-center">Jouets pour enfant</h6>
-						</a>
-					</div>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div class="col-md-4 mb-4">
-				<div class="card h-75">
-					<img src="/images/categorie/3.png" alt="Image de produits de beauté sur fond rose.">
-					<div class="card-body">
-						<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 5) }}">
+				<div class="card" style="width: 22rem">
+					<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 5) }}">
+						<img class="mx-auto" src="/images/categorie/3.png" alt="Image de produits de beauté sur fond rose." width="350px">
+						<div class="card-body">
 							<h6 class="card-title text-center">Beauté</h6>
-						</a>
-					</div>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div class="col-md-4 mb-4">
-				<div class="card h-75">
-					<img src="/images/categorie/5.png" alt="Image d'une boîte d'outils.">
-					<div class="card-body">
-						<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 6) }}">
+				<div class="card" style="width: 22rem">
+					<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 6) }}">
+						<img class="mx-auto" src="/images/categorie/5.png" alt="Image d'une boîte d'outils." width="350px">
+						<div class="card-body">
 							<h6 class="card-title text-center">Bricolage</h6>
-						</a>
-					</div>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
