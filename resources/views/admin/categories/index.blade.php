@@ -25,7 +25,7 @@
                     <td>{{ $categorie->nomCateg }}</td>
                     <td>
                         <a href="{{ route('admin.categories.edit', $categorie->id) }}" class="btn btn-warning">Éditer</a>
-                        <form action="{{ route('admin.categories.destroy', $categorie->id) }}" method="POST" style="display:inline;">
+                        <form action="{{route('admin.categories.destroy',$categorie->id)}}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Supprimer</button>

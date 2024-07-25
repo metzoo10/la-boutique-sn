@@ -13,9 +13,12 @@
 	</div>
 
 	@auth
+<!--Force ma commit nakk -->
 	<div class="container mt-5 mb-5">
 		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Adresse de facturation</div>
-		<form class="row g-3">
+		<form class="row g-3" method="post" action="{{route('checkoutValid')}}">
+			@method('POST')
+			@csrf
 		  <div class="col-md-6">
 		    <label for="inputNom4" class="form-label fw-light">Nom<span class="text-info">*</span></label>
 		    <input type="text" class="form-control" id="inputNom4"readonly value="{{Auth::user()->name}}">

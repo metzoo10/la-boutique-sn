@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title', 'La Boutique.sn votre boutique en ligne numéro 1 - ' .$produit->nom)
+@section('title', 'La Boutique.sn votre boutique en ligne numéro 1 - ' .$produit->nomProd)
 @section('content')
 	<!-- Page de détail de produit -->
 
@@ -16,7 +16,7 @@
 	  		<ol class="breadcrumb">
 	    		<li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="/">Accueil</a></li>
 	    		<li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="/boutique">Boutique</a></li>
-	    		<li class="breadcrumb-item active text-uppercase" aria-current="page">{{ $produit->nom }}</li>
+	    		<li class="breadcrumb-item active text-uppercase" aria-current="page">{{ $produit->nomProd }}</li>
 	  		</ol>
 		</nav>
 	</div>
@@ -24,11 +24,11 @@
 		<div class="row g-5">
 			{{-- Colonne image produit --}}
 			<div class="col-md-4">
-				<img src="/{{ $produit->image }}" alt="{{ $produit->nom }}" class="img-fluid">
+				<img src="{{asset($produit->image) }}" alt="{{ $produit->nomProd }}" class="img-fluid">
 			</div>
 			{{-- Colonne nom, prix, stock, quantité, boutons ajout panier et ajout wishlist --}}
 			<div class="col-md-4">
-				<h5 class="border-bottom">{{ $produit->nom }}</h5>
+				<h5 class="border-bottom">{{ $produit->nomProd }}</h5>
 				<p>{{ $produit->prix }} FCFA</p>
 				<p class="fs-6">Disponibilité : <span class="text-info fw-bold">{{ $produit->stock }}</span></p>
 				<div class="d-flex flex-column mb-3">

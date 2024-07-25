@@ -12,7 +12,7 @@
             @method('PUT')
             <div class="mb-3">
                 <label for="nom" class="form-label">Nom du Produit</label>
-                <input type="text" class="form-control @error('nom') is-invalid @enderror" id="nom" name="nom" value="{{ old('nom', $produit->nom) }}" required>
+                <input type="text" class="form-control @error('nom') is-invalid @enderror" id="nom" name="nom" value="{{ old('nom', $produit->nomProd) }}" required>
                 @error('nom')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -40,13 +40,13 @@
             </div>
             <div class="mb-3">
                 <label for="image" class="form-label">Image</label>
-                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
+                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image" >
                 @error('image')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
                 @if ($produit->image)
                     <div class="mt-2">
-                        <img src="{{ asset('storage/' . $produit->image) }}" alt="{{ $produit->nom }}" class="img-thumbnail" width="150">
+                        <img src="{{old(asset('storage/' . $produit->image) )}}" alt="{{ $produit->nom }}" class="img-thumbnail" width="150">
                     </div>
                 @endif
             </div>

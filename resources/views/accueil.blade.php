@@ -9,6 +9,12 @@
 			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		</div>
 	@endif
+	@if(session('alert_deconn'))
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+			{{ session('alert_deconn') }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	@endif
 
 	<div class="container-fluid mt-5 mb-5">
 
@@ -55,8 +61,8 @@
 		<div class="row">
 			@foreach ($produits as $produit)
 				<div class="col-md-3 mb-3">
-					<div class="card card_heit">
-						<a href="{{route('detail',$produit->id)}}"><img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>
+					<div class="card" style="width: 18 rem;">
+						<a href="{{route('detail',$produit->id)}}"><img src="{{asset($produit->image) }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>
 						<div class="card-body">
 							{{-- Lien qui amène vers la page de détail du produit avec son id comme paramètre --}}
 							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">

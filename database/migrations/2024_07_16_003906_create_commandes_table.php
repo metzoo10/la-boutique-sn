@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('commandes', function (Blueprint $table) {
             $table->id(); 
-            $table->string('numero_commande');
-            $table->integer('montant_total');
             $table->unsignedBigInteger('user_id');
+            $table->integer('montant_total');
+            $table->string('status')->default('En attente');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
             

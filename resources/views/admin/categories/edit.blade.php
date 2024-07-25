@@ -10,6 +10,9 @@
         <div class="mb-3">
             <label for="nomCateg" class="form-label">Nom de la Catégorie</label>
             <input type="text" class="form-control" id="nomCateg" name="nomCateg" value="{{ $categorie->nomCateg }}" required>
+            @error('nomCateg')
+            <div class="invalid-feedback">{{ $message }}</div>
+        @enderror
         </div>
         <button type="submit" class="btn btn-primary">Mettre à jour</button>
     </form>
