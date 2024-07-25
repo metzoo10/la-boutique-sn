@@ -129,5 +129,6 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
     Route::put('/updateProd/{produit}', [ProductController::class,'update'])->name('admin.produits.update');
 
 
-    Route::get('/commandes', [CommandeController::class])->name('admin.commandes.index');
-    Route::get('/utilisateurs', [UtilisateurController::class])->name('admin.utilisateurs.index');
+    Route::get('/commandes', [CommandeController::class, 'index'])->name('admin.commandes.index');
+    Route::get('/utilisateurs', [UtilisateurController::class, 'index'])->name('admin.utilisateurs.index');
+

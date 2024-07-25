@@ -106,7 +106,7 @@
                     <div class="footer-box payment-box">
                         <h5>NOUS UTILISONS DES PAIEMENTS SÉCURISÉS:</h5>
                         <ul>
-                            <li><img src="/images/brands/visa.jpg" alt="Logo Visa" title="Visa"></li>
+                            <li><img src="/images/brands/visa.png" alt="Logo Visa" title="Visa"></li>
                             <li><img src="/images/brands/wave.jpg" alt="Logo Wave" title="Wave"></li>
                             <li><img src="/images/brands/orange_money.jpg" alt="Logo Orange_Money" title="Orange Money"></li>
                         </ul>

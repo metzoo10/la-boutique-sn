@@ -30,8 +30,8 @@ class ProduitController extends Controller
     {
 
 
-// recuperation des produits plus pagination
-// $produits = Produit::paginate(9);
+        // recuperation des produits plus pagination
+        // $produits = Produit::paginate(9);
 
 
         // utilise les conditions switch pour faire des tris par catégorie, nom et prix.

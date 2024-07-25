@@ -13,6 +13,7 @@
 	</div>
 
 	@auth
+<!--Force ma commit nakk -->
 	<div class="container mt-5 mb-5">
 		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Adresse de facturation</div>
 		<form class="row g-3" method="post" action="{{route('checkoutValid')}}">
@@ -29,7 +30,7 @@
 		  </div>
 		  <div class="col-12">
 		    <label for="inputPhone2" class="form-label fw-light">Téléphone<span class="text-info">*</span></label>
-		    <input type="number" class="form-control" id="inputPhone2" readonly value="{{Auth::user()->telephone}}">
+		    <input type="text" class="form-control" id="inputPhone2" readonly value="{{Auth::user()->telephone}}">
 		  </div>
 		  
 	
@@ -56,7 +57,7 @@
 				  <label class="form-check-label" for="flexRadioDefault3">
 				    Visa
 				  </label>
-				  <img class="rounded" src="/images/brands/visa.jpg" alt="Logo Visa" title="Visa" height="30px">
+				  <img class="rounded" src="/images/brands/visa.png" alt="Logo Visa" title="Visa" height="30px">
 				</div>
 				{{-- CALCULER LE PRIX TOTAL A FAIRE  --}}
 				<h6 class="mt-3">Total : <b>5000</b> FCFA</h6>

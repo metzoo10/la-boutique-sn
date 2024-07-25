@@ -1,9 +1,7 @@
 <!-- resources/views/admin/produits/index.blade.php -->
 
 @extends('admin.layout')
-
 @section('title', 'Produits')
-
 @section('content')
     <h2 class="py-3 text-center">Listes des Produits</h2>
     <a href="{{ route('admin.produits.create') }}" class="btn btn-primary mb-4  ">Ajouter un Produit</a> 
@@ -27,8 +25,8 @@
         <tbody>
             @foreach ($produits as $produit)
                 <tr>
-                    <td>{{ $produit->id}}</td>
-                    <td>{{ $produit->nomProd }}</td>
+                    <td>{{ $produit->id }}</td>
+                    <td>{{ $produit->nom }}</td>
                     <td>{{ $produit->prix }}</td>
                     @if ($produit->categories)
                     <td>	{{ $produit->categories->nomCateg }}</td>
