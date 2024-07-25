@@ -5,10 +5,20 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <h2 class="text-uppercase">Espace DE VISUALISATION</h2>
-    <p>Ci-dessous les détails du site.</p>
 
-    <section class="mx-auto" style="background-color: #f1f5f9; min-height: 50dvh; width: calc(80% - 24px);">
+<div class="container-fluid mt-5">
+  <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="text-uppercase text-info text-decoration-none" href="/">Dashboard</a></li>
+        <li class="breadcrumb-item active text-uppercase" aria-current="page">Detail du site</li>
+      </ol>
+  </nav>
+</div>
+<div class="container-fluid mt-5">
+    <h2 class="text-uppercase">Espace DE VISUALISATION</h2>
+    <p class="py-3">Ci-dessous les détails du site.</p>
+  
+    <section class="mx-auto py-3 " style=" min-height: 50dvh; width: calc(80% - 24px); background: rgba(62, 127, 247, 0.407); border-radius: 10px">
          <div class="container-fluid mx-auto">
             
           <div class="title-wrapper pt-30 mb-5">
@@ -19,18 +29,7 @@
                 </div>
               </div>
               
-              <div class="col-md-6">
-                <div class="breadcrumb-wrapper">
-                  <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item">
-                        <a href="#0">Dashboard</a>
-                      </li>
-                      <li class="breadcrumb-item active" aria-current="page">La boutique sn.</li>
-                    </ol>
-                  </nav>
-                </div>
-              </div>
+              
 
             </div>
             
@@ -44,12 +43,15 @@
                   <i class="lni lni-cart-full"></i>
                 </div>
                 <div class="content">
-                  <h6 class="mb-10">Total Catégories</h6>
+                  <a href="{{ route('admin.categories.index') }}" class="btn btn-dark w-100">
+                    <h6 class="mb-10">Total Catégories</h6>
                   <h3 class="text-bold mb-10">{{$totalCategory}}</h3>
                   <p class="text-sm text-success">
                     <i class="lni lni-arrow-up"></i> +2.00%
                     <span class="text-gray">(30 derniers jours)</span>
                   </p>
+                  </a>
+                  
                 </div>
               </div>
 
@@ -61,12 +63,14 @@
                   <i class="lni lni-dollar"></i>
                 </div>
                 <div class="content">
+                  <a href="{{ route('admin.produits.index') }}" class="btn btn-danger w-100">
                   <h6 class="mb-10">Total produits ajouté(s)</h6>
                   <h3 class="text-bold mb-10">{{$totalProduit}}</h3>
-                  <p class="text-sm text-success">
+                  <p class="text-sm ">
                     <i class="lni lni-arrow-up"></i> +5.45%
                     <span class="text-gray">Increased</span>
                   </p>
+                </a>
                 </div>
               </div>
 
@@ -78,12 +82,14 @@
                   <i class="lni lni-credit-cards"></i>
                 </div>
                 <div class="content">
+                  <a href="{{ route('admin.commandes.index') }}" class="btn btn-success w-100">
                   <h6 class="mb-10">Total Commandes</h6>
                   <h3 class="text-bold mb-10">0</h3>
                   <p class="text-sm text-danger">
                     <i class="lni lni-arrow-down"></i> 0
                     <span class="text-gray">Expense</span>
                   </p>
+                </a>
                 </div>
               </div>
 
@@ -95,12 +101,14 @@
                   <i class="lni lni-credit-cards"></i>
                 </div>
                 <div class="content">
+                  <a href="{{ route('admin.utilisateurs.index') }}" class="btn btn-warning w-100">
                   <h6 class="mb-10">Utilisateurs Inscrit(s)</h6>
                   <h3 class="text-bold mb-10">{{$totalUser}}</h3>
                   <p class="text-sm text-success">
                     <i class="lni lni-arrow-down"></i> -2.00%
                     <span class="text-gray">Expense</span>
                   </p>
+                  </a>
                 </div>
               </div>
 
@@ -108,4 +116,5 @@
 
          </div>
       </section>
+</div>
 @endsection
