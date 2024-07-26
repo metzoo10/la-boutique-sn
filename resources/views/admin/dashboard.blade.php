@@ -84,7 +84,7 @@
                 <div class="content">
                   <a href="{{ route('admin.commandes.index') }}" class="btn btn-success w-100">
                   <h6 class="mb-10">Total Commandes</h6>
-                  <h3 class="text-bold mb-10">0</h3>
+                  <h3 class="text-bold mb-10">{{$totals_command}}</h3>
                   <p class="text-sm text-danger">
                     <i class="lni lni-arrow-down"></i> 0
                     <span class="text-gray">Expense</span>
