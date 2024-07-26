@@ -37,7 +37,7 @@ Route::get('/about', function () {
 
 // Routage de la page de commande
 Route::get('/checkout', [ClientCommandeController::class, 'index'])->name('checkout')->middleware('auth');
-Route::post('/checkout-validation', [ClientCommandeController::class, 'store'])->name('checkoutValid')->middleware('auth');
+Route::get('/checkout-validation', [ClientCommandeController::class, 'store'])->name('checkoutValid')->middleware('auth');
 
 // Routage de la page de contact
 Route::get('/contact', function () {
@@ -123,6 +123,11 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
 
     // ROUTE POUR COMMANDES
     Route::get('/commandes', [CommandeController::class, 'index'])->name('admin.commandes.index');
+    Route::get('/commandes/{commande}', [CommandeController::class, 'edit'])->name('admin.commandes.edit');
+    Route::put('/commandes/{commande}/update', [CommandeController::class, 'update'])->name('admin.commandes.update');
+   
+
+   
 
     // ROUTE POUR UTILISATEURS
     Route::get('/utilisateurs', [UtilisateurController::class, 'index'])->name('admin.utilisateurs.index');
