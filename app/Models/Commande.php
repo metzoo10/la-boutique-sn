@@ -13,7 +13,7 @@ class Commande extends Model
 
     public function products()
     {
-        return $this->belongsToMany(Produit::class);
+        return $this->belongsToMany(Produit::class,'commande_produits');
     }
 
     public function items()
@@ -23,6 +23,6 @@ class Commande extends Model
 
     public function users()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'commande_produits,user_id');
     }
 }
