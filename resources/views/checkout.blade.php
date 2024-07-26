@@ -44,7 +44,7 @@
 		@endif
 
 		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Adresse de facturation</div>
-		<form class="row g-3" method="post" action="{{route('checkoutValid')}}">
+		<form class="row g-3" method="get" action="{{route('checkoutValid')}}">
 			@method('POST')
 			@csrf
 		  <div class="col-md-6">
