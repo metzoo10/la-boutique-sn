@@ -7,6 +7,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\ContactController;
 
 use App\Http\Controllers\Admin\CategorieController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -43,6 +44,9 @@ Route::get('/checkout-validation', [ClientCommandeController::class, 'store'])->
 Route::get('/contact', function () {
     return view('contact');
 });
+
+// Route pour traiter le formulaire de contact
+Route::post('/contact', [ContactController::class, 'update'])->name('contact.update');
 
 // Routage de la page du "Panier" avec la fonction "showCart" qui affiche le contenu du panier
 Route::get('/panier', [CartController::class, 'showCart'])->name('cart.show');
