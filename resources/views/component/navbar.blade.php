@@ -75,7 +75,7 @@
                <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Bonjour, {{Auth::user()->name}}</button>
                <ul class="dropdown-menu">
                    <li><a class="dropdown-item" href="{{route('compte')}}"><i class="fa-solid fa-user"></i> Mon compte</a></li>
-                   <li><a class="dropdown-item" href="/checkout"><i class="fa-solid fa-box"></i> Commandes</a></li>
+                   <li><a class="dropdown-item" href="{{route('mesCommandes')}}"><i class="fa-solid fa-box"></i> Commandes</a></li>
                    <form action="{{route('logout')}}" method="POST">
                     @csrf
                         <li class="nav-item">
