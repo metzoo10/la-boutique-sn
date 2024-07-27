@@ -36,7 +36,7 @@ class AuthController extends Controller
      } 
     //  SINON REDIRECTION SUR LA PAGE  
      return to_route('auth.Formlogin')->withErrors([
-        'email'=>"email invalide"
+        'email'=>"Email ou mot de passe incorrecte"
      ])->onlyInput('email');
         
     }
