@@ -101,6 +101,10 @@ Route::get('/terms-conditions', function () {
 // Routage de la page de compte
 Route::get('/compte', [AuthController::class, 'Moncompte'])->name('compte');
 
+// ROUTE POUR VISUALISER SES COMMANDES FAITES
+Route::get('/mes-commande', [ClientCommandeController::class, 'myCommande'])->name('mesCommandes');
+
+
 // Routage de la page de catégories avec la fonction "show" qui gràce à l'id recupère le nom de la catégorie
 Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categories.show');
 
