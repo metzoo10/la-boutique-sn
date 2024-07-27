@@ -25,21 +25,21 @@
 
 		<!-- Caroussel slide pour faire défiler des bannières -->
 
-		<div id="carouselExampleAutoplaying" class="carousel carousel-dark slide mb-5 mt-5" data-bs-ride="carousel">
+		<div id="carouselExampleAutoplaying" class="carousel carousel-dark slide mb-3 mt-3" data-bs-ride="carousel">
 		  <div class="carousel-inner">
 		    <div class="carousel-item active text-center">
 		    	<a href="{{ route('categories.show', 3) }}">
-		      		<img src="/images/banner/10.png" class="img-fluid img-thumbnail" alt="...">
+		      		<img src="/images/banner/10.png" class="d-block w-100" alt="...">
 		      	</a>
 		    </div>
 		    <div class="carousel-item text-center">
 		    	<a href="{{ route('categories.show', 2) }}">
-		      		<img src="/images/banner/2.png" class="img-fluid img-thumbnail" alt="...">
+		      		<img src="/images/banner/2.png" class="d-block w-100" alt="...">
 		      	</a>
 		    </div>
 		    <div class="carousel-item text-center">
 		    	<a href="{{ route('categories.show', 1) }}">
-		      		<img src="/images/banner/3.png" class="img-fluid img-thumbnail" alt="...">
+		      		<img src="/images/banner/3.png" class="d-block w-100" alt="...">
 		      	</a>
 		    </div>
 		  </div>
