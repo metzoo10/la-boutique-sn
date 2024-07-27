@@ -29,17 +29,17 @@
 		  <div class="carousel-inner">
 		    <div class="carousel-item active text-center">
 		    	<a href="{{ route('categories.show', 3) }}">
-		      		<img src="/images/banner/10.png" class="img-fluid" alt="...">
+		      		<img src="/images/banner/10.png" class="img-fluid img-thumbnail" alt="...">
 		      	</a>
 		    </div>
 		    <div class="carousel-item text-center">
 		    	<a href="{{ route('categories.show', 2) }}">
-		      		<img src="/images/banner/2.png" class="img-fluid" alt="...">
+		      		<img src="/images/banner/2.png" class="img-fluid img-thumbnail" alt="...">
 		      	</a>
 		    </div>
 		    <div class="carousel-item text-center">
 		    	<a href="{{ route('categories.show', 1) }}">
-		      		<img src="/images/banner/3.png" class="img-fluid" alt="...">
+		      		<img src="/images/banner/3.png" class="img-fluid img-thumbnail" alt="...">
 		      	</a>
 		    </div>
 		  </div>
@@ -88,7 +88,7 @@
 		<!-- Section offres -->
 
 		<div class="p-3 my-3 bg-info">
-			<h5 class="m-0">Découvrez nos offres !</h5>
+			<h5 class="m-0">Découvrez nos offres du moment !</h5>
 		</div>
 		<div class="row p-3 gx-4 mt-4 mb-5">
 			<div class="col">

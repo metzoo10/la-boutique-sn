@@ -69,7 +69,7 @@ class AuthController extends Controller
         ]);
 // REDIRECTION VERS LA PAGE de connexion
          return redirect()->intended(route('auth.Formlogin'))->with('register_success','Votre inscription est réussie!');;
-         return redirect()->intended(route('auth.Formlogin'))->with('register_success','Votre inscription est réussi'); 
+         return redirect()->intended(route('auth.Formlogin'))->with('register_success','Votre inscription est réussie!'); 
     }
 
     // FONCTION POUR DECONNEXION
@@ -82,7 +82,7 @@ class AuthController extends Controller
 
         return redirect('/')->with('alert_deconn','Vous vous êtes déconnecté avec succès!');
 
-        return redirect('/')->with('alert_deconn','Vous vous etes deconnecter');;
+        return redirect('/')->with('alert_deconn','Vous vous êtes déconnecté!');;
 
     }
 

@@ -15,9 +15,10 @@ class ClientCommandeController extends Controller
     {
         $cartItems = Session::get('cart', []);
 
-        return view('checkout', compact('cartItems'));
-    }
+        $orders = Commande::all();
 
+        return view('checkout', compact('cartItems', 'orders'));
+    }
 
     public function store(Request $request)
     {
