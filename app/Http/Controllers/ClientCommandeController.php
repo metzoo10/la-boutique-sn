@@ -14,7 +14,6 @@ class ClientCommandeController extends Controller
     public function index(Request $request)
     {
         $cartItems = Session::get('cart', []);
-        
         return view('checkout', compact('cartItems'));
     }
 
