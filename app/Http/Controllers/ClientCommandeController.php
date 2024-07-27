@@ -14,10 +14,8 @@ class ClientCommandeController extends Controller
     public function index(Request $request)
     {
         $cartItems = Session::get('cart', []);
-
-        $orders = Commande::all();
-
-        return view('checkout', compact('cartItems', 'orders'));
+        
+        return view('checkout', compact('cartItems'));
     }
 
     public function store(Request $request)
@@ -61,6 +59,12 @@ class ClientCommandeController extends Controller
         session()->forget('cart');
 
         return redirect()->route('accueil')->with('success', 'Votre commande a été passée avec succès.');
+    }
+
+    public function myCommande()
+    {
+        $orders = Commande::all();
+        return view('mesCommandes',compact('orders'));
     }
 
    
