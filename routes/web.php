@@ -37,8 +37,8 @@ Route::get('/about', function () {
 });
 
 // Routage de la page de commande
-Route::get('/checkout', [ClientCommandeController::class, 'index'])->name('checkout')->middleware('auth');
-Route::get('/checkout-validation', [ClientCommandeController::class, 'store'])->name('checkoutValid')->middleware('auth');
+Route::get('/checkout', [ClientCommandeController::class, 'index'])->name('checkout')->middleware('auth','client');
+Route::get('/checkout-validation', [ClientCommandeController::class, 'store'])->name('checkoutValid')->middleware('auth','client');
 
 // Routage de la page de contact
 Route::get('/contact', function () {
@@ -72,15 +72,15 @@ Route::get('/thankyou', function () {
 });
 
 // Routage de la page de connexion
-Route::get('/login', [AuthController::class,'Formlogin'])->name('auth.Formlogin');
-Route::post('/login', [AuthController::class,'traitementLogin'])->name('auth.traitementLogin');
+Route::get('/login', [AuthController::class,'Formlogin'])->name('auth.Formlogin')->middleware('guest');
+Route::post('/login', [AuthController::class,'traitementLogin'])->name('auth.traitementLogin')->middleware('guest');
 
 // ROUTAGE DE DECONNECTION
 Route::get('/logout', [AuthController::class,'logout'])->name('logout');
 
 // Routage de la page d'inscription
-Route::get('/register',  [AuthController::class, 'formRegister'])->name('auth.formRegister');
-Route::post('/register',  [AuthController::class, 'inscription'])->name('auth.inscription');
+Route::get('/register',  [AuthController::class, 'formRegister'])->name('auth.formRegister')->middleware('guest');
+Route::post('/register',  [AuthController::class, 'inscription'])->name('auth.inscription')->middleware('guest');
 
 
 // Routage de la page de confidentialité
@@ -99,10 +99,10 @@ Route::get('/terms-conditions', function () {
 });
 
 // Routage de la page de compte
-Route::get('/compte', [AuthController::class, 'Moncompte'])->name('compte');
+Route::get('/compte', [AuthController::class, 'Moncompte'])->name('compte')->middleware('client','auth');
 
 // ROUTE POUR VISUALISER SES COMMANDES FAITES
-Route::get('/mes-commande', [ClientCommandeController::class, 'myCommande'])->name('mesCommandes');
+Route::get('/mes-commande', [ClientCommandeController::class, 'myCommande'])->name('mesCommandes')->middleware('client','auth');
 
 
 // Routage de la page de catégories avec la fonction "show" qui gràce à l'id recupère le nom de la catégorie
@@ -111,20 +111,20 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
 
 
 // ADMIN
-    Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::middleware(['admin','auth'])->prefix('admin/')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
         // ROUTE CATEGORY
-    Route::get('/categories', [CategorieController::class, 'index'])->name('admin.categories.index');
-    Route::get('/createCateg', [CategorieController::class, 'create']);
-    Route::get('/editCateg/{category}', [CategorieController::class, 'edit'])->name('admin.categories.edit');
-    Route::post('/storeCateg', [CategorieController::class, 'store']);
-    Route::put('/updateCateg/{category}', [CategorieController::class, 'update'])->name('admin.categories.update');
+    Route::get('categories', [CategorieController::class, 'index'])->name('admin.categories.index');
+    Route::get('createCateg', [CategorieController::class, 'create'])->name('admin.categories.create');
+    Route::get('editCateg/{category}', [CategorieController::class, 'edit'])->name('admin.categories.edit');
+    Route::post('storeCateg', [CategorieController::class, 'store'])->name('admin.categories.store');
+    Route::put('updateCateg/{category}', [CategorieController::class, 'update'])->name('admin.categories.update');
     Route::delete('/destroyCateg/{category}', [CategorieController::class, 'destroy'])->name('admin.categories.destroy');
 
     // ROUTE PRODUIT
     Route::get('/produits', [ProductController::class,'index'])->name('admin.produits.index');
     Route::get('/createProd', [ProductController::class,'create'])->name('admin.produits.create');
-    Route::post('/storeProd', [ProductController::class,'store'])->name('admin.produits.store');
+    Route::get('/storeProd', [ProductController::class,'store'])->name('admin.produits.store');
     Route::get('/editProd/{produit}', [ProductController::class,'edit'])->name('admin.produits.edit');
     Route::delete('/destroyProd/{produit}', [ProductController::class,'destroy'])->name('admin.produits.destroy');
     Route::put('/updateProd/{produit}', [ProductController::class,'update'])->name('admin.produits.update');
