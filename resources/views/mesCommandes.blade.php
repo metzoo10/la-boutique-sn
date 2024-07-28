@@ -15,6 +15,7 @@
 	
 <!--Force ma commit nakk -->
 	<div class="container mt-5 mb-5">
+    
 		@if(count($orders) > 0)
 		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Produits commandés</div>
 			<table class="mt-2 mb-4">
@@ -41,7 +42,5 @@
 					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 				</div>
 		@endif
-
-		
 	
 @endsection
