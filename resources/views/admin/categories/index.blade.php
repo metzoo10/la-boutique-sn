@@ -4,7 +4,7 @@
 
 @section('content')
     <h2>Catégories</h2>
-    <a href="/createCateg" class="btn btn-primary mb-3">Ajouter une Catégorie</a>
+    <a href="{{route('admin.categories.create')}}" class="btn btn-primary mb-3">Ajouter une Catégorie</a>
     @if (session('success'))
         <div class="alert alert-success">
             {{ session('success') }}

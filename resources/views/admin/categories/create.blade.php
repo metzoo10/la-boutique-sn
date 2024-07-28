@@ -4,7 +4,7 @@
 
 @section('content')
     <h2>Ajouter une Catégorie</h2>
-    <form action="/storeCateg" method="POST">
+    <form action="{{route('admin.categories.store')}}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="nomCateg" class="form-label">Nom de la Catégorie</label>
