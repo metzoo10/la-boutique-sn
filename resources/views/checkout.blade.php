@@ -1,8 +1,8 @@
 @extends('layout.main')
 @section('title', 'La Boutique.sn votre boutique en ligne numéro 1 - Commande')
 @section('content')
-	<!-- Page de commande --> 
-	
+	<!-- Page de commande -->
+
 	<div class="container mt-5">
 		<nav aria-label="breadcrumb">
 	  		<ol class="breadcrumb">
@@ -15,7 +15,7 @@
 	@auth
 <!--Force ma commit nakk -->
 	<div class="container mt-5 mb-5">
-		
+
 		@if(count($cartItems) > 0)
 		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Résumé de la commande</div>
 		<table class="mt-2 mb-4">
@@ -51,7 +51,7 @@
 		    <label for="inputNom4" class="form-label fw-light">Nom<span class="text-info">*</span></label>
 		    <input type="text" class="form-control" id="inputNom4"readonly value="{{Auth::user()->name}}">
 		  </div>
-		  
+
 		  <div class="col-6">
 		    <label for="inputAddress" class="form-label fw-light">Adresse<span class="text-info">*</span></label>
 		    <input type="text" class="form-control" id="inputAddress" readonly value="{{Auth::user()->adresse}}">
@@ -60,8 +60,8 @@
 		    <label for="inputPhone2" class="form-label fw-light">Téléphone<span class="text-info">*</span></label>
 		    <input type="text" class="form-control" id="inputPhone2" readonly value="{{Auth::user()->telephone}}">
 		  </div>
-		  
-	
+
+
 		<div class="row g-3 mt-5 mb-5 border border-secondary py-4">
 			<div class="col-md-6 p-4">
 				<div class="h6 mt-2 mb-4 text-muted border-bottom border-secondary">Méthode de paiement</div>
@@ -110,7 +110,7 @@
 		</form>
 		</div>
 	</div>
-		
+
 	@endauth
 	@guest
 	<div class="alert alert-warning text-center alert-dismissible fade show" role="alert">
@@ -119,5 +119,5 @@
 	</div>
 	@endguest
 
-	
+
 @endsection
