@@ -124,7 +124,7 @@ Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('categ
     // ROUTE PRODUIT
     Route::get('/produits', [ProductController::class,'index'])->name('admin.produits.index');
     Route::get('/createProd', [ProductController::class,'create'])->name('admin.produits.create');
-    Route::get('/storeProd', [ProductController::class,'store'])->name('admin.produits.store');
+    Route::post('/storeProd', [ProductController::class,'store'])->name('admin.produits.store');
     Route::get('/editProd/{produit}', [ProductController::class,'edit'])->name('admin.produits.edit');
     Route::delete('/destroyProd/{produit}', [ProductController::class,'destroy'])->name('admin.produits.destroy');
     Route::put('/updateProd/{produit}', [ProductController::class,'update'])->name('admin.produits.update');
