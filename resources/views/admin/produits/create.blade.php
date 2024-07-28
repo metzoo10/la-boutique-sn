@@ -9,6 +9,7 @@
         <h2 class="mb-4">Ajouter un Produit</h2>
         <form action="{{ route('admin.produits.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            
            
             <div class="mb-3">
                 <label for="nom" class="form-label">Nom du Produit</label>
