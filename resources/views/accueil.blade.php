@@ -59,18 +59,20 @@
 			<h5 class="m-0">Produits populaires</h5>
 		</div>
 		<div class="row">
+			<div class="layer"></div>
 			@foreach ($produits as $produit)
-				<div class="col-md-3 mb-3">
-					<div class="card" style="width: 18 rem;">
+				<div class="col-md-3 mb-3 cards onover">
+					<span class="fas fa-eye bg-info d-flex items-center justify-content-center align-items-center fs-5 rounded" title="Voir tout prés"></span>
+					<div class="card bg-lighter" style="width: 18 rem; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
 						<a href="{{route('detail',$produit->id)}}"><img src="{{asset($produit->image) }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>
-						<div class="card-body">
+						<div class="card-body bg-white">
 							{{-- Lien qui amène vers la page de détail du produit avec son id comme paramètre --}}
 							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">
 								<h5 class="card-title">{{ $produit->nomProd }}</h5>
 							</a>
 							<p class="card-text fw-medium text-info">{{ $produit->prix }} FCFA</p>
 						</div>
-						<div class="card-footer">
+						<div class="card-footer bg-white">
 							<div class="d-grid gap-2">
 								<a href="{{ route('cart.add', $produit->id) }}" class="btn btn-outline-info">
   									Ajouter au panier
