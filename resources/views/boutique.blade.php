@@ -54,33 +54,35 @@
 				</form>
 			</div>
 		</div>
-		<div class="row">
-			{{-- Boucle foreach pour afficher tous les produits avec leur nom, image, prix et catégorie --}}
-			@foreach ($produits as $produit)
-				<div class="col-md-3 mb-3">
-					<div class="card" style="width: 18 rem;">
-						<a href="{{route('detail',$produit->id)}}"><img src="{{asset($produit->image) }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>
-						<div class="card-body">
-							{{-- Lien qui amène vers la page de détail du produit avec son id comme paramètre --}}
-							<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">
-								<h5 class="card-title">{{ $produit->nomProd }}</h5>
-							</a>
-							<p class="card-text fw-medium text-info">{{ $produit->prix }} FCFA</p>
-						</div>
-						<div class="card-footer">
-							<div class="d-grid gap-2">
-								<a href="{{ route('cart.add', $produit->id) }}" class="btn btn-outline-info">
-  									Ajouter au panier
-  								</a>
-  								<a href="{{ route('wishlist.add', $produit->id) }}" class="btn btn-outline-primary">
-  									Ajouter à la liste d'envies
-  								</a>
-							</div>
-						</div>
+<div class="row">
+	<div class="layer"></div>
+	{{-- Boucle foreach pour afficher tous les produits avec leur nom, image, prix et catégorie --}}
+	@foreach ($produits as $produit)
+	<div class="col-md-3 mb-3 cards onover">
+		<span class="fas fa-eye d-flex items-center justify-content-center align-items-center fs-5 rounded" title="Voir tout prés"></span>
+		<div class="card bg-lighter" style="width: 18 rem; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+				<a href="{{route('detail',$produit->id)}}"><img src="{{asset($produit->image) }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>
+				<div class="card-body bg-white">
+					{{-- Lien qui amène vers la page de détail du produit avec son id comme paramètre --}}
+					<a class="text-muted text-decoration-none" href="/detail/{{ $produit->id }}">
+						<h5 class="card-title">{{ $produit->nomProd }}</h5>
+					</a>
+					<p class="card-text fw-medium text-info">{{ $produit->prix }} FCFA</p>
+				</div>
+				<div class="card-footer bg-white">
+					<div class="d-grid gap-2">
+						<a href="{{ route('cart.add', $produit->id) }}" class="btn btn-outline-info">
+							Ajouter au panier
+						</a>
+						<a href="{{ route('wishlist.add', $produit->id) }}" class="btn btn-outline-primary">
+							Ajouter à la liste d'envies
+						</a>
 					</div>
 				</div>
-			@endforeach
+			</div>
 		</div>
+		@endforeach
+	</div>
 		{{-- Pagination avec links() --}}
 		<div class="d-flex justify-content-center mb-3">
 			{{ $produits->appends(['sort' => $sort])->links()}}
