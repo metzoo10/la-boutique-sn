@@ -59,11 +59,12 @@ class ClientCommandeController extends Controller
 
         return redirect()->route('accueil')->with('success', 'Votre commande a été passée avec succès.');
     }
-
+// recuperer les commande passer par client identifier
     public function myCommande()
     {
-        $orders = Commande::all();
-        return view('mesCommandes',compact('orders'));
+        $user = Auth::user();
+        $commandes = $user->Commandes;
+        return view('mesCommandes',compact('commandes'));
     }
 
    
