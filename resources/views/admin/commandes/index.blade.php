@@ -38,7 +38,7 @@
                     <tr>
                         <td>{{ $commande->id }}</td>
                         <td>{{ $commande->user_id }}</td>
-                        <td>{{ $commande->total }} fcfa</td>
+                        <td>{{ $commande->montant_total }} fcfa</td>
                         <td>{{ $commande->status}}</td>
                         <td>{{ $commande->created_at->format('d/m/Y H:i') }}</td>
                         <td>
