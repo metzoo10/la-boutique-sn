@@ -91,9 +91,9 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/')->with('alert_deconn','Vous vous êtes déconnecté avec succès!');
+        return redirect()->route('accueil')->with('alert_deconn','Vous vous êtes déconnecté avec succès!');
 
-        return redirect('/')->with('alert_deconn','Vous vous êtes déconnecté!');;
+        
 
     }
 
