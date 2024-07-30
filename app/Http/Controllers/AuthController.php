@@ -39,7 +39,7 @@ class AuthController extends Controller
             //    SI OUI ON CREE UNE SESSION
         $request->session()->regenerate();
         // REDIRECTION VERS LA PAGE DEMANDER OUBIEN LA DIREGER VERS BOUTIQUE
-                return redirect()->route('admin.dashboard')->with('connexion_success',' ,Vous êtes connecté avec succès!');
+                return redirect()->route('admin.dashboard')->with('connexion_success',' Bienvenue sur votre tableau de bord');
 
         }
   
@@ -91,9 +91,9 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/')->with('alert_deconn','Vous vous êtes déconnecté avec succès!');
+        return redirect()->route('accueil')->with('alert_deconn','Vous vous êtes déconnecté avec succès!');
 
-        return redirect('/')->with('alert_deconn','Vous vous êtes déconnecté!');;
+        
 
     }
 

@@ -5,6 +5,12 @@
 @section('title', 'Dashboard')
 
 @section('content')
+@if(session('connexion_success'))
+		<div class="alert alert-success text-center alert-dismissible fade show" role="alert">
+		<h4> {{session('connexion_success') }} </h4>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	@endif
 
 <div class="container-fluid mt-5">
   <nav aria-label="breadcrumb">
