@@ -16,31 +16,39 @@
 <!--Force ma commit nakk -->
 	<div class="container mt-5 mb-5">
     
-		@if(count($orders) > 0)
+		
 		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Produits commandés</div>
-			<table class="mt-2 mb-4">
-				<thead>
+
+		@if($commandes->isEmpty())
+		<p>Vous n'avez pas encore passé de commandes.</p>
+	@else
+		<table class="table table-striped table-primary table-hover"> 
+			<thead>
+				<tr>
+					<th>ID de la commande</th>
+					<th>Date</th>
+					<th>Produits</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach($commandes as $commande)
 					<tr>
-						<th>ID de la commande</th>
-						<th>État</th>
-						<th>Montant total</th>
+						<td>{{ $commande->id }}</td>
+						<td>{{ $commande->created_at->format('d/m/Y') }}</td>
+						<td>
+							@foreach($commande->products as $produit)
+	
+							<img src="{{ asset( $produit->image)}}" alt="" style="width: 50px; heith:50px; margin-left: 10px">	
+
+							@endforeach
+						</td>
+						<td>{{ $commande->montant_total  }} fcfa</td>
 					</tr>
-				</thead>
-				<tbody>
-					@foreach($orders as $order)
-					<tr>
-						<td>{{ $order->id }}</td>
-						<td>{{ $order->status }}</td>
-						<td>{{ $order->montant_total }} fcfa</td>
-					</tr>
-					@endforeach
-				</tbody>
-			</table>
-			@else
-				<div class="alert alert-warning text-center alert-dismissible fade show" role="alert">
-					<h1>Aucune commande n'a été passée !</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>
-		@endif
+				@endforeach
+			</tbody>
+		</table>
+	@endif
+	</div>
 	
 @endsection
