@@ -28,6 +28,7 @@
 					<th>ID de la commande</th>
 					<th>Date</th>
 					<th>Produits</th>
+					<th>Status</th>
 					<th>Total</th>
 				</tr>
 			</thead>
@@ -43,6 +44,7 @@
 
 							@endforeach
 						</td>
+						<td>{{ $commande->status  }} fcfa</td>
 						<td>{{ $commande->montant_total  }} fcfa</td>
 					</tr>
 				@endforeach
