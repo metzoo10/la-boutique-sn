@@ -40,7 +40,7 @@
 						<td>
 							@foreach($commande->products as $produit)
 
-							<img src="{{ asset( $produit->image)}}" alt="" style="width: 55px; heith:55px; margin-left: 10px; border-radius:15px">
+							<img src="{{ asset( $produit->image)}}" alt="" style="width: 55px; heith:55px; margin-left: 10px; border-radius:20px">
 
 							@endforeach
 						</td>
