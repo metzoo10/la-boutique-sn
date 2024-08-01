@@ -44,7 +44,7 @@
 
 							@endforeach
 						</td>
-						<td>{{ $commande->status  }} fcfa</td>
+						<td>{{ $commande->status  }}</td>
 						<td>{{ $commande->montant_total  }} fcfa</td>
 					</tr>
 				@endforeach
