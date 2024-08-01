@@ -31,7 +31,7 @@
 				@foreach($produits as $produit)
 				<div class="col-md-3 mb-3 cards onover">
 					<span class="fas fa-eye bg-info d-flex items-center justify-content-center align-items-center fs-5 rounded" title="Voir tout prés"></span>
-					<div class="card bg-lighter" style="width: 18rem; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+					<div class="card bg-lighter" style="width: 20rem; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
 							<a href="{{route('detail',$produit->id)}}"><img src="{{ $produit->image }}" class="card-img-top" alt="{{ $produit->nomProd }}"></a>	
 
 							<div class="card-body bg-white">
