@@ -1,8 +1,8 @@
 @extends('layout.main')
 @section('title', 'La Boutique.sn votre boutique en ligne numéro 1 - Commande')
 @section('content')
-	<!-- Page de commande --> 
-	
+	<!-- Page de commande -->
+
 	<div class="container mt-5">
 		<nav aria-label="breadcrumb">
 	  		<ol class="breadcrumb">
@@ -12,17 +12,17 @@
 		</nav>
 	</div>
 
-	
+
 <!--Force ma commit nakk -->
 	<div class="container mt-5 mb-5">
-    
-		
+
+
 		<div class="h5 pb-2 mt-2 mb-4 text-uppercase text-muted border-bottom border-secondary">Produits commandés</div>
 
 		@if($commandes->isEmpty())
 		<p>Vous n'avez pas encore passé de commandes.</p>
 	@else
-		<table class="table table-striped table-primary table-hover"> 
+		<table class="table table-striped table-primary table-hover">
 			<thead>
 				<tr>
 					<th>ID de la commande</th>
@@ -39,8 +39,8 @@
 						<td>{{ $commande->created_at->format('d/m/Y') }}</td>
 						<td>
 							@foreach($commande->products as $produit)
-	
-							<img src="{{ asset( $produit->image)}}" alt="" style="width: 50px; heith:50px; margin-left: 10px">	
+
+							<img src="{{ asset( $produit->image)}}" alt="" style="width: 55px; heith:55px; margin-left: 10px; border-radius:15px">
 
 							@endforeach
 						</td>
@@ -52,5 +52,5 @@
 		</table>
 	@endif
 	</div>
-	
+
 @endsection

@@ -55,7 +55,7 @@
 
 		<!-- Section des produits populaires -->
 
-		<div class="p-3 my-3 bg-info">
+		<div class="p-3 my-3 bg-info" style="text-align: center">
 			<h5 class="m-0">Produits populaires</h5>
 		</div>
 		<div class="row">
@@ -89,10 +89,10 @@
 
 		<!-- Section offres -->
 
-		<div class="p-3 my-3 bg-info">
+		<div class="p-3 my-3 bg-info " style="text-align: center">
 			<h5 class="m-0">Découvrez nos offres du moment !</h5>
 		</div>
-		<div class="row p-3 gx-4 mt-4 mb-5">
+		<div class="row p-3 gx-4 mt-4 mb-5 ml-30" style="margin-left: 5%">
 			<div class="col">
 				<a href="{{ route('categories.show', 1) }}">
 					<img src="/images/banner/4.png" class="img-fluid border border-info" alt="">
@@ -104,7 +104,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="row p-3 gx-4 mt-4 mb-5">
+		<div class="row p-3 gx-4 mt-4 mb-5" style="margin-left: 5%">
 			<div class="col">
 				<a href="{{ route('categories.show', 6) }}">
 					<img src="/images/banner/6.png" class="img-fluid border border-danger" alt="">
@@ -119,10 +119,10 @@
 
 		<!-- Section de toutes les catégories -->
 
-		<div class="p-3 my-3 bg-info">
+		<div class="p-3 my-3 bg-info" style="text-align: center">
 			<h5 class="m-0">Toutes les catégories</h5>
 		</div>
-		<div class="row p-4">
+		<div class="row p-4"  style="margin-left: 5%">
 			<div class="col-md-4 mb-4">
 				<div class="card" style="width: 22rem;">
 					<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 1) }}">
@@ -140,7 +140,7 @@
 						<div class="card-body">
 							<h6 class="card-title text-center">Mode</h6>
 						</div>
-					</a>	
+					</a>
 				</div>
 			</div>
 			<div class="col-md-4 mb-4">
@@ -155,7 +155,7 @@
 			</div>
 		</div>
 
-		<div class="row p-4">
+		<div class="row p-4" style="margin-left: 5%">
 			<div class="col-md-4 mb-4">
 				<div class="card" style="width: 22rem">
 					<a class="text-muted text-decoration-none link-info link-offset-2 link-opacity-25 link-opacity-100-hover" href="{{ route('categories.show', 4) }}">
